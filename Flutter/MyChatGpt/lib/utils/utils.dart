@@ -11,7 +11,7 @@ class Utils {
   /// Private constructor for the Utils class.
   Utils._internal();
 
-  /// The ID of the CONVA AI assistant.
+  /// The Copilot ID of the CONVA AI assistant.
   static String assistantId = "0c48ae816df1465caff9f4be2b7b3024";
 
   /// The API key for accessing the CONVA AI system.
