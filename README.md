@@ -1,1 +1,1 @@
-# conva_ai_demo_apps
+# conva-ai-demo-apps
