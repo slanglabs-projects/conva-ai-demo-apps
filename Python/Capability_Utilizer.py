@@ -7,37 +7,35 @@ def greeting():
 
 
 async def generate(client: AsyncConvaAI, query: str, capability_group: str):
-    client = AsyncConvaAI(
-        copilot_id="<YOUR_COPILOT_ID>",
-        copilot_version="<ASSISTANT_VERSION>",
-        api_key="<YOUR_API_KEY>"
-    )
     response = client.invoke_capability(query, stream=True, capability_group=capability_group)
+    out = ""
     async for res in response:
         out = res
     return out
     
-
-
 async def main():
+    client = AsyncConvaAI(
+        copilot_id="", # Copy the Copilot ID from Magic Studio
+        api_key="", # Copy the API Key from Magic Studio
+        copilot_version="" # Copy the version from Magic Studio
+    )
     greeting()
     while True:
         print("What capability would you like to choose from the following: JokeGenerator, RecipeGenerator, GrammarNinja \n")
         capability = input("Enter the capability (Type 'exit'to quit): ").lower()
         if capability == 'jokegenerator':
-            await jokegenerator()
+            await jokegenerator(client)
         elif capability == 'recipegenerator':
-            await recipegenerator()
+            await recipegenerator(client)
         elif capability == 'grammarninja':
-            await grammar_ninja()
+            await grammar_ninja(client)
         elif capability == 'exit':
             break
         else:
             print("Invalid capability selection. Please try again.\n")
 
 
-async def jokegenerator():
-    global client
+async def jokegenerator(client):
     print("You've selected the JokeGenerator capability!\n")
     print("Enter the topic for which you wanna hear the joke!")
     while True:
@@ -45,12 +43,11 @@ async def jokegenerator():
         if query.lower() == 'exit':
             break
 
-        final_response = asyncio.run(generate(client, query, capability_group = "joke"))
+        final_response = await generate(client, query, capability_group = "Jokes")
         print(final_response)
 
 
-async def recipegenerator():
-    global client
+async def recipegenerator(client):
     print("You've selected the RecipeGenerator capability!\n")
     print("What do you call a fake noodle? - An impasta!")
     while True:
@@ -59,16 +56,18 @@ async def recipegenerator():
         if query.lower() == 'exit':
             break
 
-        final_response = asyncio.run(generate(client, query, "recipe"))
+        final_response = await generate(client, query, "Receipes")
+        print("Here are some receipes: ")
         print(final_response)
+        #for receipe in final_response.parameters.receipes_list:
+        #  print(receipe)
 
 
-async def grammar_ninja():
-    global client
+async def grammar_ninja(client):
     print("You've selected the GrammarNinja capability!\n")
     print("Why don't chatbots ever get tired of talking?\nBecause they have an unlimited supply of 'byte-sized' conversation!")
     while True:
-        print("Enter the text (Type 'exit' to quit)")
+        print("Enter the text with some spelling mistake(Type 'exit' to quit)")
         text = input("Text: ")
         if text == 'exit':
             break
@@ -77,7 +76,7 @@ async def grammar_ninja():
         replace = input("Word: ")
         query = text + ":" + replace
 
-        final_response = asyncio.run(generate(client, query, "ninja"))
+        final_response = await generate(client, query, "ninja")
         print(final_response)
 
 

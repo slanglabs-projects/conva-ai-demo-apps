@@ -14,9 +14,9 @@ async def generate(client, query: str, stream: bool):
 
 async def main():
     client = AsyncConvaAI(
-        copilot_id="<Copilot ID>", 
-        api_key="<API key>", 
-        copilot_version="<version number>"
+        copilot_id="", # Copy the Copilot ID from Magic Studio 
+        api_key="", # Copy the API Key from Magic Studio 
+        copilot_version="" # Copy the version from Magic Studio
     )
     greeting()
     query = input("Your first questson? (Type 'exit' to quit) ")
