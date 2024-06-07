@@ -1,24 +1,15 @@
 package `in`.slanglabs.androidpg
 
 import android.app.Application
-import android.content.Context
-import android.util.Log
-import `in`.slanglabs.androidpg.slang.SlangInterface
+import `in`.slanglabs.androidpg.convaai.ConvaAIInterface
 
 class App : Application() {
 
-    private lateinit var mRepository: Repository
+    lateinit var repository: Repository
 
     override fun onCreate() {
         super.onCreate()
-        val mSlangInterface = SlangInterface(this)
-        val mPrefs = getSharedPreferences("slang_android_pg", Context.MODE_PRIVATE)
-        mRepository = Repository(
-            mSlangInterface, mPrefs
-        )
-    }
-
-    fun getRepository(): Repository {
-        return mRepository
+        val convaAIInterface = ConvaAIInterface(this)
+        repository = Repository(convaAIInterface)
     }
 }
