@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?><!-- This is a sample actions.xml -->
+<actions>
+    <action intentName="actions.intent.OPEN_APP_FEATURE">
+        <!-- Use url from inventory match for deep link fulfillment -->
+        <fulfillment urlTemplate="{@url}" />
+        <fulfillment urlTemplate="app://slang.vamo.home/page=home" />
+
+        <parameter name="feature">
+            <entity-set-reference entitySetId="featureParamEntitySet" />
+        </parameter>
+    </action>
+
+    <action intentName="actions.intent.GET_PRODUCT">
+        <fulfillment urlTemplate="app://slang.vamo.home/{?description}">
+            <parameter-mapping
+                intentParameter="product.description"
+                urlParameter="description"/>
+        </fulfillment>
+    </action>
+
+    <action intentName="custom.actions.intent.ADD_TO_CART" queryPatterns="@array/example_queries_add_to_cart">
+        <parameter name="size" type="https://schema.org/Number" />
+        <parameter name="description" type="https://schema.org/Text" />
+
+        <fulfillment urlTemplate="app://slang.vamo.home/{?size,description}">
+            <parameter-mapping intentParameter="size" urlParameter="size" required="true"/>
+            <parameter-mapping intentParameter="description" urlParameter="description" required="true"/>
+        </fulfillment>
+        <fulfillment urlTemplate="app://slang.vamo.home/" />
+    </action>
+
+    <entity-set entitySetId="featureParamEntitySet">
+        <entity
+            name="cart"
+            url="app://slang.vamo.home?page=cart" />
+        <entity
+            name="orders"
+            url="app://slang.vamo.home?page=orders" />
+        <entity
+            name="app"
+            alternateName="@array/open_app_alternate_name"
+            url="app://slang.vamo.home" />
+    </entity-set>
+</actions>
+

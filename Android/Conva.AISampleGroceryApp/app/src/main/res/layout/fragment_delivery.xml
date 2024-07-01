@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".UI.Fragments.DeliveryFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ic_baseline_location_on_24"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="10dp"
+                android:text="747 Choctaw Dr,Fremont"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="right"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="8dp"
+                android:textColor="@color/colorPrimary"
+                android:text="Edit >"
+                />
+        </LinearLayout>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            style="@style/YourCardView"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutFreshPass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:src="@drawable/img" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="35dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="Unlimited free delivery &amp; exclusive perks with a 30-day free trial"
+                        android:textSize="13dp" />
+
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignTop="@+id/linearLayoutFreshPass"
+                    android:layout_alignBottom="@+id/linearLayoutFreshPass"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="5dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_baseline_keyboard_arrow_right_black_24" />
+
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/materialCardViewFastest"
+            android:clickable="true"
+            android:layout_marginTop="14dp"
+            android:layout_marginStart="12dp"
+            app:strokeWidth="1dp"
+            android:elevation="20dp"
+            app:strokeColor="@color/colorPrimary"
+            android:layout_marginEnd="12dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutFastest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginBottom="11dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/fastest_time"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="sans-serif-black"
+                        android:text="Today, 9 AM - 10 AM" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="Fastest" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/linearLayoutFastest"
+                    android:layout_alignBottom="@+id/linearLayoutFastest"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="13dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="$3.45"
+                    android:textStyle="bold" />
+
+
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/materialCardViewBestValue"
+            android:layout_marginTop="7dp"
+            android:layout_marginStart="12dp"
+            app:strokeWidth="1dp"
+            android:elevation="20dp"
+            app:strokeColor="@color/colorPrimary"
+            android:layout_marginEnd="12dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutBestValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginBottom="11dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="sans-serif-black"
+                        android:text="Today, 12 PM - 4 PM" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="Best Value" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/linearLayoutBestValue"
+                    android:layout_alignBottom="@+id/linearLayoutBestValue"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="13dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="$2.50"
+                    android:textStyle="bold" />
+
+
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/materialCardViewMDT"
+            android:layout_marginTop="14dp"
+            android:layout_marginStart="12dp"
+            app:strokeWidth="1dp"
+            android:elevation="20dp"
+            app:strokeColor="@color/colorPrimary"
+            android:layout_marginEnd="12dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutMDT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginBottom="11dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtViewMDT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="More delivery times" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignTop="@+id/linearLayoutMDT"
+                    android:layout_alignBottom="@+id/linearLayoutMDT"
+                    android:layout_marginStart="1dp"
+                    android:layout_toEndOf="@+id/linearLayoutMDT"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_baseline_keyboard_arrow_right_black_24" />
+
+
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+    </LinearLayout>
+
+</FrameLayout>

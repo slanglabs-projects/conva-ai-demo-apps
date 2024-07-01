@@ -1,0 +1,637 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackgroundFAQ"
+
+    tools:context=".UI.Activities.PlaceOrderActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <LinearLayout
+            android:id="@+id/linearLayoutWholeDeliver"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/img_van" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/materialCardViewDeliver"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="12dp"
+                android:elevation="20dp"
+                app:strokeColor="@color/colorPrimary"
+                app:strokeWidth="1dp">
+
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutDeliver"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginBottom="11dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtDeliver"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="Deliver to"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="20dp"
+                        android:text="747 Choctaw Dr, Fremont"
+                        android:textColor="#000000" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@color/colorBackgroundFAQ" />
+
+                    <RelativeLayout
+                        android:id="@+id/rlTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/txtTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="35dp"
+                            android:text="Thu, July 2,9 AM-10 AM"
+                            android:textColor="#000000" />
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="10dp"
+                            android:background="@android:color/transparent"
+                            android:src="@drawable/ic_baseline_keyboard_arrow_right_black_24" />
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutWholeCVV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linearLayoutWholeDeliver"
+            android:layout_marginTop="7dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="15dp"
+                android:src="@drawable/ic_outline_credit_card_24" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/materialCardViewCVV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="12dp"
+                android:elevation="20dp"
+                app:strokeColor="@color/colorPrimary"
+                app:strokeWidth="1dp">
+
+
+                <RelativeLayout
+                    android:id="@+id/rlCVV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp">
+
+                    <ImageView
+                        android:id="@+id/imgCard"
+                        android:layout_width="40dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="5dp"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/card_image" />
+
+                    <TextView
+                        android:id="@+id/txtCVV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="40dp"
+                        android:layout_toStartOf="@+id/textConfirmCVV"
+                        android:layout_toEndOf="@+id/imgCard"
+                        android:text="1234"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:id="@+id/textConfirmCVV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp"
+                        android:text="Confirm CVV"
+                        android:textColor="@color/colorPrimary" />
+
+
+                </RelativeLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutWholeCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linearLayoutWholeCVV"
+            android:layout_marginTop="7dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/ic_outline_perm_identity_24" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/materialCardViewCardDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="12dp"
+                android:elevation="20dp"
+                app:strokeColor="@color/colorPrimary"
+                app:strokeWidth="1dp">
+
+
+                <RelativeLayout
+                    android:id="@+id/rlCardDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutCardDetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="11dp"
+                        android:layout_marginBottom="11dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtCardName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:text="Kumar Rangarajan"
+                            android:textColor="#000000" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="20dp"
+                            android:text="(650) 609-9378"
+                            android:textColor="#000000" />
+
+                        <RelativeLayout
+                            android:id="@+id/rlInfo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/imgCaution"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="3dp"
+                                android:src="@drawable/img_caution" />
+
+                            <TextView
+                                android:id="@+id/txtMessage"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="40dp"
+                                android:layout_toEndOf="@+id/imgCaution"
+                                android:text="Turn on order status text messages?"
+                                android:textSize="8dp" />
+
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/ic_baseline_keyboard_arrow_right_black_24" />
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutWholeItems"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linearLayoutWholeCard"
+            android:layout_marginTop="7dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/ic_outline_shopping_cart_24" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/materialCardViewItems"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="12dp"
+                android:elevation="20dp"
+                app:strokeColor="@color/colorPrimary"
+                app:strokeWidth="1dp">
+
+
+                <RelativeLayout
+                    android:id="@+id/rlItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutItem"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="11dp"
+                        android:layout_marginBottom="11dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtItem"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:text="1 Items"
+                            android:textColor="#000000" />
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginStart="15dp"
+                            android:background="@android:color/transparent"
+                            android:src="@drawable/img_item" />
+
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/ic_baseline_keyboard_arrow_right_black_24" />
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rlBillingPart"
+        >
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/materialCardViewTotal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/materialCardViewET"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="1dp"
+            app:cardCornerRadius="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Order summary"
+                    android:textColor="#000000"
+                    android:textSize="16dp" />
+
+                <RelativeLayout
+                    android:id="@+id/rlItemCount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="Items (1)"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:text="$9.49"
+                        android:textColor="#000000" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:id="@+id/txtEstimated"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="Estimated savings"
+                        android:textColor="#000000" />
+
+                    <ImageView
+                        android:id="@+id/imgInfo"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_toEndOf="@+id/txtEstimated"
+                        android:src="@drawable/img_info" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:text="$2.50"
+                        android:textColor="@color/colorPrimary" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <View
+                        android:id="@+id/viewline"
+                        android:layout_width="1dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/txtMPS"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="-282dp"
+                        android:background="@color/colorBackgroundFAQ" />
+
+
+                    <TextView
+                        android:id="@+id/txtMPS"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
+                        android:text="Member price savings" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:text="$2.50"
+                        android:textColor="@color/colorPrimary" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:id="@+id/txtEstimatedTaxes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="Estimated taxes and fees"
+                        android:textColor="#000000" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_toEndOf="@+id/txtEstimatedTaxes"
+                        android:src="@drawable/img_info" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:text="$14.40"
+                        android:textColor="#000000" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <View
+                        android:id="@+id/viewSales"
+                        android:layout_width="1dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/txtST"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="-282dp"
+                        android:background="@color/colorBackgroundFAQ" />
+
+
+                    <TextView
+                        android:id="@+id/txtST"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
+                        android:text="Sales tax" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:text="$0.00"
+                        android:textColor="@color/colorPrimary" />
+
+                    <TextView
+                        android:id="@+id/txtDF"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="22dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="Delivery fee" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="22dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="$9.95"
+                        android:textColor="@color/colorPrimary" />
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/materialCardViewET"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="1dp"
+            app:cardCornerRadius="0dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rlET"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtET"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Est. total"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/txtTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/txtOfferTotal"
+                    android:layout_alignBottom="@+id/txtOfferTotal"
+                    android:layout_toStartOf="@+id/txtOfferTotal"
+                    android:text="@string/strike_text" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtOfferTotal"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="$21.39"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/btn_Delivery"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="60dp"
+                    android:layout_marginEnd="60dp"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/place_order_btn"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:text="Place Order"
+                    android:textSize="15dp"
+                    android:textStyle="normal" />
+
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

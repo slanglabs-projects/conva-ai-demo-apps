@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.Activities.CartActivity">
+
+    <TextView
+        android:id="@+id/order_empty_text_view"
+        android:gravity="center"
+        android:padding="16dp"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+        android:text="Order list empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list_item_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        app:backgroundTint="@color/colorFabIcon"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="@android:color/white"
+        app:srcCompat="@drawable/ic_local_grocery_store_white_24dp" />
+
+    <TextView
+        android:layout_width="18sp"
+        android:layout_height="18sp"
+        android:id="@+id/cart_item_count"
+        android:background="@drawable/count_circle_background"
+        android:elevation="8dp"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="@android:color/white"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@id/fab"
+        app:layout_constraintTop_toTopOf="@id/fab" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

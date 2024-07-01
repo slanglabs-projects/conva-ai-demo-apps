@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="General">
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="barge_in"
+            android:title="@string/barge_in"
+            android:summary="Enable or Disable Barge-in"
+            />
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="delayed_tts"
+            android:title="@string/delayed_tts"
+            android:summary="Enable or Disable Delayed TTS"
+            />
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="local_entities"
+            android:title="@string/local_entities"
+            android:summary="Enable entities in local languages for completion prompts"
+            />
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="confirmation_for_non_voice_uj"
+            android:title="@string/confirmation_for_non_voice_uj"
+            android:summary="Enable confirmation statements for non voice user-journeys"
+            />
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="enable_fused_asr_nlp"
+            android:title="@string/enable_fused_asr_nlp"
+            android:summary="Enable fused ASR-NLP"
+            />
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="enable_lang_auto_detect"
+            android:title="@string/enable_lang_auto_detect"
+            android:summary="Enable automatic locale identification"
+            />
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="enable_ui_hints_cache"
+            android:title="@string/enable_ui_hints_cache"
+            android:summary="Enable Text search based UI hints"
+            />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Advanced">
+
+            <ListPreference
+                android:defaultValue="4"
+                android:entries="@array/surface_styles"
+                android:entryValues="@array/surface_styles_values"
+                android:key="surface_styles"
+                android:summary="%s"
+                android:title="Surface Styles" />
+            <ListPreference
+                android:defaultValue="1"
+                android:entries="@array/ui_hints"
+                android:entryValues="@array/ui_hints_values"
+                android:key="ui_hints"
+                android:summary="%s"
+                android:title="UI Hints" />
+        </PreferenceCategory>
+
+</PreferenceScreen>
+

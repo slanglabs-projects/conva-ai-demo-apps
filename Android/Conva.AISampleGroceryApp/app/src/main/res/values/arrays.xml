@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="open_app_alternate_name">
+        <item>slang</item>
+        <item>home</item>
+        <item></item>
+        <item> </item>
+        <item>slang grocery</item>
+    </string-array>
+
+    <string-array name="example_queries_add_to_cart">
+        <item>add (to cart)? $size $description</item>
+        <item>add (to basket)? $size $description</item>
+        <item>add $size $description (to cart)?</item>
+        <item>add $size $description (to basket)?</item>
+        <item> $size $description </item>
+        <item> Buy $size $description </item>
+    </string-array>
+    <!-- Reply Preference -->
+    <string-array name="reply_entries">
+        <item>Reply</item>
+        <item>Reply to all</item>
+    </string-array>
+
+    <string-array name="reply_values">
+        <item>reply</item>
+        <item>reply_all</item>
+    </string-array>
+
+</resources>

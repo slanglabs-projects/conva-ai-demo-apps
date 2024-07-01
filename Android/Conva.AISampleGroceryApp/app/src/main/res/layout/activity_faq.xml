@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackgroundFAQ"
+    tools:context=".UI.Activities.FaqActivity">
+
+
+    <LinearLayout
+        android:id="@+id/layout_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <ImageButton
+                android:id="@+id/cart_button"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_local_grocery_store_white_24dp" />
+
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="70dp"
+                android:paddingStart="10dp"
+                android:text="Need Help"
+                >
+
+            </TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:layout_marginBottom="12dp"
+                android:layout_marginEnd="70dp"
+                android:paddingStart="10dp"
+                android:layout_marginStart="8dp"
+                android:text="Send us a message"
+                android:fontFamily="sans-serif-black"
+                >
+
+            </TextView>
+
+            <ImageButton
+                android:id="@+id/btn_message"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="right"
+                android:background="@android:color/transparent"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/message_icon" />
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="3dp"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:text="Online Shopping FAQs"
+                android:padding="10dp"
+                >
+
+            </TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-5dp"
+                android:padding="10dp"
+                android:textSize="14dp"
+                android:id="@+id/textt"
+                android:text="These FAQs apply to grocery delivery and pickup services provided only by the Albertsons Compainies family of grocery store banners. These FAQs are for informational purposes only. They do not form a control between you and the company. Please view our Terms of Use for specific terms related to your online purchace order."
+                android:lineSpacingExtra="5sp"
+                >
+
+            </TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textSize="14dp"
+                android:text="Enjoy the convenience of online grocery shopping!"
+
+                >
+
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="."
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_marginTop="-16dp"
+                android:layout_marginStart="30dp"
+                android:textSize="35dp"
+                />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/delivery_to_your_home_or_business"
+                    android:textSize="14dp"
+                    android:layout_marginTop="-15dp"
+                    android:layout_marginStart="5dp"
+                    />
+
+
+            </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-11dp"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="."
+                        android:textStyle="bold"
+                        android:textColor="#000000"
+                        android:layout_marginTop="-16dp"
+                        android:layout_marginStart="30dp"
+                        android:textSize="35dp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/driveup_amp_gotm_order_pickup_at_select_store_locations"
+                        android:textSize="14dp"
+                        android:layout_marginTop="-15dp"
+                        android:layout_marginStart="5dp"
+                        />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:padding="10dp"
+                    android:textSize="14dp"
+                    android:text="Here are Frequently Asked Questions about our services: "
+
+                    >
+
+                </TextView>
+
+
+
+
+            </LinearLayout>
+
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="1dp"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="12dp"
+                        android:layout_marginEnd="70dp"
+                        android:padding="10dp"
+                        android:layout_marginStart="8dp"
+                        android:textSize="15dp"
+                        android:text="Do you offer delivery or pickup in my area?"
+                        android:fontFamily="sans-serif-black"
+                        >
+
+                    </TextView>
+
+                    <ImageButton
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="right"
+                        android:background="@android:color/transparent"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ic_baseline_keyboard_arrow_down_24" />
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="1dp"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="12dp"
+                        android:layout_marginEnd="70dp"
+                        android:padding="10dp"
+                        android:layout_marginStart="8dp"
+                        android:textSize="15dp"
+                        android:text="Who delivers my groceries?"
+                        android:fontFamily="sans-serif-black"
+                        >
+
+                    </TextView>
+
+                    <ImageButton
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="right"
+                        android:background="@android:color/transparent"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ic_baseline_keyboard_arrow_down_24" />
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="1dp"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="12dp"
+                        android:layout_marginEnd="70dp"
+                        android:padding="10dp"
+                        android:layout_marginStart="8dp"
+                        android:textSize="15dp"
+                        android:text="Do you offer delivery or pickup in my area?"
+                        android:fontFamily="sans-serif-black"
+                        >
+
+                    </TextView>
+
+                    <ImageButton
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="right"
+                        android:background="@android:color/transparent"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ic_baseline_keyboard_arrow_down_24" />
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="1dp"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="12dp"
+                        android:layout_marginEnd="70dp"
+                        android:padding="10dp"
+                        android:layout_marginStart="8dp"
+                        android:textSize="15dp"
+                        android:text="Who delivers my groceries?"
+                        android:fontFamily="sans-serif-black"
+                        >
+
+                    </TextView>
+
+                    <ImageButton
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="right"
+                        android:background="@android:color/transparent"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ic_baseline_keyboard_arrow_down_24" />
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="1dp"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="12dp"
+                        android:layout_marginEnd="70dp"
+                        android:padding="10dp"
+                        android:layout_marginStart="8dp"
+                        android:textSize="15dp"
+                        android:text="Do you offer delivery or pickup in my area?"
+                        android:fontFamily="sans-serif-black"
+                        >
+
+                    </TextView>
+
+                    <ImageButton
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="right"
+                        android:background="@android:color/transparent"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ic_baseline_keyboard_arrow_down_24" />
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="1dp"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="12dp"
+                        android:layout_marginEnd="70dp"
+                        android:padding="10dp"
+                        android:layout_marginStart="8dp"
+                        android:textSize="15dp"
+                        android:text="Do you offer delivery or pickup in my area?"
+                        android:fontFamily="sans-serif-black"
+                        >
+
+                    </TextView>
+
+                    <ImageButton
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="right"
+                        android:background="@android:color/transparent"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ic_baseline_keyboard_arrow_down_24" />
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

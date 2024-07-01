@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">Conva.AI Sample Grocery</string>
+    <string name="action_settings">Settings</string>
+    <string name="Open">Open</string>
+    <string name="Close">Close</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="barge_in">Barge-in</string>
+    <string name="delayed_tts">Delayed TTS</string>
+    <string name="confirmation_for_non_voice_uj">Non-voice confirmation statements</string>
+    <string name="enable_fused_asr_nlp">Fused ASR-NLP</string>
+    <string name="enable_lang_auto_detect">Auto detect locale</string>
+    <string name="enable_ui_hints_cache">Enable UI Hints Cache</string>
+    <string name="local_entities">Entities in local language</string>
+    <string name="surface_hints">Change surface style and hints</string>
+    <string name="delivery_to_your_home_or_business"><u>Delivery to your home or business</u></string>
+    <string name="driveup_amp_gotm_order_pickup_at_select_store_locations"><u><![CDATA[DriveUp & GoTM order pickup at select store locations]]></u></string>
+    <string name="strike_text"><strike>$23.89</strike></string>
+
+    <string-array name="surface_styles">
+        <item>Gradient Surface</item>
+        <item>Curved Surface</item>
+        <item>Card Surface</item>
+        <item>Surface</item>>
+    </string-array>
+    <string-array name="ui_hints">
+        <item>Static</item>
+        <item>Carousel</item>
+    </string-array>
+    <string-array name="ui_hints_values">
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="surface_styles_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

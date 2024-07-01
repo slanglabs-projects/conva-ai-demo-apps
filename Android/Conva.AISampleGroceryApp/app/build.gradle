@@ -1,0 +1,86 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    namespace 'in.slanglabs.convaai.demo.grocery'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "in.slanglabs.convaai.demo.grocery"
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    flavorDimensions "type"
+    productFlavors {
+        bel {
+            dimension = 'type'
+            applicationIdSuffix = '.bel'
+            versionCode = 4
+            versionName = '1.0.3'
+            buildConfigField "int", "DB_VERSION", "20"
+            buildConfigField "String", "CURRENCY_TYPE", "\"\$\""
+            buildConfigField "String", "ASSISTANT_ID", project.properties["ASSISTANT_ID"] ?: "" // Add your assistant ID here
+            buildConfigField "String", "API_KEY", project.properties["API_KEY"] ?: "" // Add your api key here
+            buildConfigField "String", "ASSISTANT_VERSION", project.properties["ASSISTANT_VERSION"] ?: "" // Add your assistant version here
+        }
+        prod {
+            dimension = 'type'
+            buildConfigField "int", "DB_VERSION", "1"
+            buildConfigField "String", "CURRENCY_TYPE", "\"₹\""
+            buildConfigField "String", "ASSISTANT_ID", project.properties["ASSISTANT_ID"] ?: "" // Add your assistant ID here
+            buildConfigField "String", "API_KEY", project.properties["API_KEY"] ?: "" // Add your api key here
+            buildConfigField "String", "ASSISTANT_VERSION", project.properties["ASSISTANT_VERSION"] ?: "" // Add your assistant version here
+        }
+        grocery {
+            dimension = 'type'
+            applicationIdSuffix = '.grocery'
+            versionCode = 34
+            versionName = '1.1.13'
+            buildConfigField "int", "DB_VERSION", "2"
+            buildConfigField "String", "CURRENCY_TYPE", "\"₹\""
+            buildConfigField "String", "ASSISTANT_ID", project.properties["ASSISTANT_ID"] ?: "" // Add your assistant ID here
+            buildConfigField "String", "API_KEY", project.properties["API_KEY"] ?: "" // Add your api key here
+            buildConfigField "String", "ASSISTANT_VERSION", project.properties["ASSISTANT_VERSION"] ?: "" // Add your assistant version here
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+android.buildFeatures.buildConfig true
+
+dependencies {
+
+    // Slang Implementation
+    implementation 'in.slanglabs.conva:conva-ai-copilot:2.3.0-beta'
+
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'com.google.android.material:material:1.12.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    implementation("com.squareup.moshi:moshi:1.9.3")
+    implementation "androidx.room:room-runtime:2.4.0-rc01"
+    annotationProcessor "androidx.room:room-compiler:2.4.0-rc01"
+    implementation 'me.xdrop:fuzzywuzzy:1.4.0'
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    implementation 'androidx.preference:preference:1.2.1'
+}
