@@ -69,7 +69,7 @@ android.buildFeatures.buildConfig true
 dependencies {
 
     // Slang Implementation
-    implementation 'in.slanglabs.conva:conva-ai-copilot:2.3.0-beta'
+    implementation 'in.slanglabs.conva:conva-ai-copilot:2.3.2-beta'
 
     implementation 'androidx.appcompat:appcompat:1.7.0'
     implementation 'com.google.android.material:material:1.12.0'
