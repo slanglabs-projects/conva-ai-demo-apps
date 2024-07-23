@@ -10,11 +10,6 @@
         <option name="gradleJvm" value="jbr-17" />
         <option name="modules">
           <set>
-            <option value="$PROJECT_DIR$/../../slang-android-omni-assistant/conva-ai-copilot" />
-            <option value="$PROJECT_DIR$/../../slang-android-omni-sdk/conva-ai-core" />
-            <option value="$PROJECT_DIR$/../../slang-android-omni-sdk/conva-ai-speech" />
-            <option value="$PROJECT_DIR$/../../slang-android-omni-sdk/conva-ai-talk" />
-            <option value="$PROJECT_DIR$/../../slang-android-omni-sdk/conva-ai-telemetry" />
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
           </set>

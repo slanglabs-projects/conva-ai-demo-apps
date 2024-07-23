@@ -55,7 +55,7 @@ class ConvaAICoreImpl(private val mApplication: Application): ConvaAICoreFacade 
     ) {
         CoroutineScope(Dispatchers.IO).launch {
             try {
-                val response = ConvaAI.invokeCapability(
+                val response = ConvaAI.invokeCapabilityWithName(
                     input = text, capability = capabilitySelected, context = ConvaAIContext(history = conversationHistory)
                 )
                 conversationHistory = response.history
@@ -83,7 +83,7 @@ class ConvaAICoreImpl(private val mApplication: Application): ConvaAICoreFacade 
     ) {
         CoroutineScope(Dispatchers.IO).launch {
             try {
-                ConvaAI.invokeCapability(
+                ConvaAI.invokeCapabilityWithName(
                     input = text,
                     capability = capabilitySelected,
                     listener = object : ResponseListener {

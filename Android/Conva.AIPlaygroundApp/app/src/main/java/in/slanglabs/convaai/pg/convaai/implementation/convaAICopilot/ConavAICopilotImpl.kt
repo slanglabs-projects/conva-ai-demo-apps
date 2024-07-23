@@ -44,7 +44,6 @@ class ConavAICopilotImpl(private val application: Application, responseCallBack:
 
         // Build the options for setting up ConvaAI
         val options = ConvaAIOptions.Builder()
-            .setEnvironment(ConvaAICopilot.Environment.PRODUCTION)
             .setListener(getConvaAICopilotListener())
             .setCapabilityHandler(getConvaAICopilotAction())
 
