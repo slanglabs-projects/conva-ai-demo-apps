@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import `in`.slanglabs.convaai.pg.model.ChatHistory
 
 @Composable
 fun ChatBlock(
@@ -13,7 +14,7 @@ fun ChatBlock(
     logoImage: Int = 0,
     logoTitle: String = "title",
     isChatHistoryVisible: Boolean = false,
-    chatHistory: List<Pair<String, String>>,
+    chatHistory: List<ChatHistory>,
     onMessageClicked: () -> Unit) {
     Column(
     modifier = modifier
@@ -21,7 +22,9 @@ fun ChatBlock(
         .padding(top = 16.dp, start = 16.dp, end = 16.dp)
     ) {
         if (isChatHistoryVisible) {
-            ChatSurfaceBlock(chatHistoryList = chatHistory, onMessageClicked = {
+            ChatSurfaceBlock(
+                chatHistoryList = chatHistory,
+                onMessageClicked = {
                 onMessageClicked()
             })
         } else {

@@ -46,16 +46,26 @@ fun AssistantSelectionScreen(
             ) {
                 CardButtonBlock(
                     ConvaAISDKType.COPILOT_SDK.typeValue,
-                    onClick = {it
-                        val destination = viewModel.onAssistantSelected(it,appData)
+                    onClick = {
+                        val destination = viewModel.onAssistantSelected(
+                            assistantType = it,
+                            appData = appData,
+                            showBottomBar = false,
+                            showInputBox = false
+                        )
                         navController.navigate(destination)
                     },
                     primarySelectionColor
                 )
                 CardButtonBlock(
                     ConvaAISDKType.FOUNDATION_SDK.typeValue,
-                    onClick = {it
-                        val destination = viewModel.onAssistantSelected(it,appData)
+                    onClick = {
+                        val destination = viewModel.onAssistantSelected(
+                            assistantType = it,
+                            appData = appData,
+                            showBottomBar = true,
+                            showInputBox = true
+                        )
                         navController.navigate(destination)
                     },
                     secondarySelectionColor

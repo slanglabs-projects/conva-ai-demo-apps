@@ -7,6 +7,7 @@ import `in`.slanglabs.convaai.copilot.platform.ConvaAIInteraction
 import `in`.slanglabs.convaai.copilot.platform.ConvaAIOptions
 import `in`.slanglabs.convaai.copilot.platform.ConvaAIResponse
 import `in`.slanglabs.convaai.copilot.platform.action.ConvaAIHandler
+import `in`.slanglabs.convaai.copilot.platform.action.ConvaAIUtteranceListener
 import `in`.slanglabs.convaai.copilot.platform.template.ConvaAIAppConfigs
 import `in`.slanglabs.convaai.core.ConvaAI
 
@@ -18,9 +19,9 @@ import `in`.slanglabs.convaai.core.ConvaAI
  * @property listener The callback listener for assistant responses.
  * @property lifecycleObserver The lifecycle observer for the assistant.
  */
-class ConavAICopilotImpl(private val application: Application, responseCallBack: ConvaAICopilotResponserListener, private val lifecycleObserver: ConvaAICopilotLifecycleObserver) :
+class ConavAICopilotImpl(private val application: Application, responseCallBack: ConvaAICopilotResponseListener, private val lifecycleObserver: ConvaAICopilotLifecycleObserver) :
     ConvaAICopilotFacade {
-    var listener: ConvaAICopilotResponserListener = responseCallBack
+    var listener: ConvaAICopilotResponseListener = responseCallBack
     var isSDKInit: Boolean = false
 
     /**
@@ -35,7 +36,7 @@ class ConavAICopilotImpl(private val application: Application, responseCallBack:
         assistantID: String,
         assistantKey: String,
         assistantVersion: String,
-        startActivity: Activity?
+        startActivity: Activity
     ) {
         if (isSDKInit) return
 
@@ -46,10 +47,9 @@ class ConavAICopilotImpl(private val application: Application, responseCallBack:
         val options = ConvaAIOptions.Builder()
             .setListener(getConvaAICopilotListener())
             .setCapabilityHandler(getConvaAICopilotAction())
+            .setUtteranceListener(getConvaAIUtteranceListener())
 
-        if (startActivity != null) {
-            options.setStartActivity(startActivity)
-        }
+        options.setStartActivity(startActivity)
 
         // Setup the ConvaAI with the built options
         ConvaAICopilot.setup(options.build())
@@ -72,6 +72,10 @@ class ConavAICopilotImpl(private val application: Application, responseCallBack:
         ConvaAICopilot.shutdown()
     }
 
+    override fun setGlobalTrigger() {
+        ConvaAICopilot.builtinUI.setGlobalTrigger()
+    }
+
     /**
      * Displays the ConvaAIOverlay UI
      *
@@ -79,6 +83,16 @@ class ConavAICopilotImpl(private val application: Application, responseCallBack:
      */
     override fun showUI(activity: Activity) {
         ConvaAICopilot.builtinUI.show(activity)
+    }
+
+    private fun getConvaAIUtteranceListener() : ConvaAIUtteranceListener {
+        return ConvaAIUtteranceListener { text ->
+            text?.let {
+                // TODO:- Once the SDK provide callback for all types of text source,
+                //      we will provide the text detected from this callback instead of sending
+                //      input from response.
+            }
+        }
     }
 
     /**
@@ -96,7 +110,14 @@ class ConavAICopilotImpl(private val application: Application, responseCallBack:
              * @param isFinal Indicates if the response is final.
              */
             override fun onCapability(response: ConvaAIResponse, interactionData: ConvaAIInteraction, isFinal: Boolean) {
-                if (isFinal) listener.onResponse(response.responseString)
+                if (isFinal) {
+                    lifecycleObserver.onTextDetected(response.input)
+                    listener.onResponse(
+                        message = response.message,
+                        params = response.params,
+                        jsonString = response.responseString
+                    )
+                }
             }
         }
     }

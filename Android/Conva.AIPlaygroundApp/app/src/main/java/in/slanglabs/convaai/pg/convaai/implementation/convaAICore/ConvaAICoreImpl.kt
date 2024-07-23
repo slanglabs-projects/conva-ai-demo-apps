@@ -47,9 +47,8 @@ class ConvaAICoreImpl(private val mApplication: Application): ConvaAICoreFacade 
      * @param capabilitySelected The selected capability.
      * @param responseCallBack The callback listener for the response.
      */
-    override fun singleShotResponse(
+    override fun singleShotResponseWithName(
         text: String,
-        capabilityGroupSelected: String,
         capabilitySelected: String,
         responseCallBack: ConvaAICoreResponseListener
     ) {
@@ -59,10 +58,36 @@ class ConvaAICoreImpl(private val mApplication: Application): ConvaAICoreFacade 
                     input = text, capability = capabilitySelected, context = ConvaAIContext(history = conversationHistory)
                 )
                 conversationHistory = response.history
-                responseCallBack.onResponse(response.message, response.responseString)
+                responseCallBack.onResponse(response.message, response.params, response.responseString)
             } catch (e: Exception) {
                 // Handle Exception
-                responseCallBack.onResponse("Error while sending the request, Please try again",e.message ?: "")
+                responseCallBack.onResponse("Error while sending the request, Please try again", emptyMap(),  e.message ?: "")
+            }
+        }
+    }
+
+    /**
+     * Invokes a capability within a specified capability group and handles the response.
+     *
+     * @param text The input text for the ConvaAICore.
+     * @param capabilityGroupSelected The selected capability group.
+     * @param responseCallBack The callback listener for the response.
+     */
+    override fun singleShotResponse(
+        text: String,
+        capabilityGroupSelected: String?,
+        responseCallBack: ConvaAICoreResponseListener
+    ) {
+        CoroutineScope(Dispatchers.IO).launch {
+            try {
+                val response = ConvaAI.invokeCapability(
+                    input = text, capabilityGroup = capabilityGroupSelected, context = ConvaAIContext(history = conversationHistory)
+                )
+                conversationHistory = response.history
+                responseCallBack.onResponse(response.message, response.params, response.responseString)
+            } catch (e: Exception) {
+                // Handle Exception
+                responseCallBack.onResponse("Error while sending the request, Please try again", emptyMap(),e.message ?: "")
             }
         }
     }
@@ -75,9 +100,8 @@ class ConvaAICoreImpl(private val mApplication: Application): ConvaAICoreFacade 
      * @param capabilitySelected The selected capability.
      * @param responseCallBack The callback listener for the response.
      */
-    override fun streamResponse(
+    override fun streamResponseWithName(
         text: String,
-        capabilityGroupSelected: String,
         capabilitySelected: String,
         responseCallBack: ConvaAICoreResponseListener
     ) {
@@ -91,6 +115,7 @@ class ConvaAICoreImpl(private val mApplication: Application): ConvaAICoreFacade 
                             conversationHistory = response.history
                             responseCallBack.onResponseStream(
                                 response.message,
+                                response.params,
                                 response.responseString,
                                 response.isFinal
                             )
@@ -104,7 +129,41 @@ class ConvaAICoreImpl(private val mApplication: Application): ConvaAICoreFacade 
                 )
             } catch (e: Exception) {
                 // Handle Exception
-                responseCallBack.onResponse("Error while sending the request, Please try again",e.message ?: "")
+                responseCallBack.onResponse("Error while sending the request, Please try again", emptyMap(),  e.message ?: "")
+            }
+        }
+    }
+
+    override fun streamResponse(
+        text: String,
+        capabilityGroupSelected: String?,
+        responseCallBack: ConvaAICoreResponseListener
+    ) {
+        CoroutineScope(Dispatchers.IO).launch {
+            try {
+                ConvaAI.invokeCapability(
+                    input = text,
+                    capabilityGroup = capabilityGroupSelected,
+                    listener = object : ResponseListener {
+                        override fun onResponse(response: Response, isFinal: Boolean) {
+                            conversationHistory = response.history
+                            responseCallBack.onResponseStream(
+                                response.message,
+                                response.params,
+                                response.responseString,
+                                response.isFinal
+                            )
+                        }
+
+                        override fun onError(e: Exception) {
+                            // Handle error
+                            throw e
+                        }
+                    }
+                )
+            } catch (e: Exception) {
+                // Handle Exception
+                responseCallBack.onResponse("Error while sending the request, Please try again", emptyMap(),  e.message ?: "")
             }
         }
     }

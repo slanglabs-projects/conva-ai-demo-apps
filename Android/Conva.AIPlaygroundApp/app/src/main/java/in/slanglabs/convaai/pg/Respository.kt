@@ -1,6 +1,7 @@
 package `in`.slanglabs.convaai.pg
 
 import android.app.Activity
+import com.google.gson.GsonBuilder
 import `in`.slanglabs.convaai.pg.model.ASRData
 import `in`.slanglabs.convaai.pg.model.ChatResponse
 import `in`.slanglabs.convaai.pg.convaai.interfaces.ConvaAICopilotInterface
@@ -16,14 +17,18 @@ class Repository(
     private val convaAISpeechInterface: ConvaAISpeechInterface,
     private val convaAITalkInterface: ConvaAITalkInterface
 ) {
-    private val responseData = MutableStateFlow<ChatResponse>(ChatResponse("",""))
+    private val responseData = MutableStateFlow(ChatResponse())
+    private val textDetectedData = MutableStateFlow("")
     private val responseStreamData = MutableStateFlow<ChatResponse?>(null)
-    private val asrData = MutableStateFlow<ASRData>(ASRData("",null))
-    private val _convaAICopilotState = MutableStateFlow<ConvaAICopilotState>(ConvaAICopilotState.IDLE)
-    private val _convaAISDKType = MutableStateFlow<ConvaAISDKType>(ConvaAISDKType.FOUNDATION_SDK)
+    private val asrData = MutableStateFlow(ASRData("",null))
+    private val _convaAICopilotState = MutableStateFlow(ConvaAICopilotState.IDLE)
+    private val _convaAISDKType = MutableStateFlow(ConvaAISDKType.FOUNDATION_SDK)
 
     val response: Flow<ChatResponse>
         get() = responseData
+
+    val textDetected: Flow<String>
+        get() = textDetectedData
 
     val responseStream: Flow<ChatResponse?>
         get() = responseStreamData
@@ -54,6 +59,7 @@ class Repository(
             else -> {
                 _convaAISDKType.value = ConvaAISDKType.COPILOT_SDK
                 convaAICopilotInterface.initialiseCopilotService(assistantID, assistantKey, assistantVersion, startActivity)
+                convaAICopilotInterface.showUI(activity = startActivity)
             }
         }
 
@@ -66,6 +72,10 @@ class Repository(
         } else {
             ConvaAICopilotState.FAILED.apply { setFailureMessage(errorMessage) }
         }
+    }
+
+    fun setTextDetected(text: String) {
+        textDetectedData.value = text
     }
 
     fun invokeCopilot(activity: Activity) {
@@ -102,9 +112,17 @@ class Repository(
         responseStreamData.value = response
     }
 
-    fun clearData() {
-        responseData.value = ChatResponse("","")
+    fun mapToPrettyJsonString(map: Map<String, Any>): String {
+        if (map.isEmpty()) return ""
+        val gson = GsonBuilder().setPrettyPrinting().create()
+        return gson.toJson(map)
+    }
+
+
+    private fun clearData() {
+        responseData.value = ChatResponse()
         responseStreamData.value = null
+        textDetectedData.value = ""
         clearASRData()
     }
 

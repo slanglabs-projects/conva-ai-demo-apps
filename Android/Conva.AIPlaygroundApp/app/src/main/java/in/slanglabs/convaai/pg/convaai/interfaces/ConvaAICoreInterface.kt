@@ -34,14 +34,38 @@ class ConvaAICoreInterface(private val application: Application) {
         capabilityGroupSelected: String,
         capabilitySelected: String
     ) {
+        if (capabilitySelected.isNotEmpty()) {
+            singleShotResponseWithName(text,capabilitySelected)
+            return
+        }
         convaAICore?.singleShotResponse(
             text,
             capabilityGroupSelected,
+            object : ConvaAICoreResponseListener {
+                override fun onResponse(message: String, params: Map<String, Any>, jsonString: String) {
+                    val repository: Repository = (application as App).repository
+                    val response = ChatResponse(
+                        message = message,
+                        params = params,
+                        jsonString = jsonString
+                    )
+                    repository.sendResponse(response)
+                }
+            })
+    }
+
+    private fun singleShotResponseWithName(text: String, capabilitySelected: String) {
+        convaAICore?.singleShotResponseWithName(
+            text,
             capabilitySelected,
             object : ConvaAICoreResponseListener {
-                override fun onResponse(message: String, jsonString: String) {
+                override fun onResponse(message: String, params: Map<String, Any>, jsonString: String) {
                     val repository: Repository = (application as App).repository
-                    val response = ChatResponse(message,jsonString)
+                    val response = ChatResponse(
+                        message = message,
+                        params = params,
+                        jsonString = jsonString
+                    )
                     repository.sendResponse(response)
                 }
             })
@@ -52,19 +76,52 @@ class ConvaAICoreInterface(private val application: Application) {
         capabilityGroupSelected: String,
         capabilitySelected: String
     ) {
+        if (capabilitySelected.isNotEmpty()) {
+            streamResponseWithName(text,capabilitySelected)
+            return
+        }
         val repository: Repository = (application as App).repository
 
-        convaAICore?.streamResponse(
+        convaAICore?.streamResponseWithName(
             text,
             capabilityGroupSelected,
+            object : ConvaAICoreResponseListener {
+                override fun onResponseStream(
+                    message: String,
+                    params: Map<String, Any>,
+                    jsonString: String,
+                    isFinal: Boolean
+                ) {
+                    val response = ChatResponse(
+                        message = message,
+                        params = params,
+                        jsonString = jsonString,
+                        isFinal = isFinal
+                    )
+                    repository.sendResponseStream(response)
+                }
+            })
+    }
+
+    private fun streamResponseWithName(text: String, capabilitySelected: String) {
+        val repository: Repository = (application as App).repository
+
+        convaAICore?.streamResponseWithName(
+            text,
             capabilitySelected,
             object : ConvaAICoreResponseListener {
                 override fun onResponseStream(
                     message: String,
+                    params: Map<String, Any>,
                     jsonString: String,
                     isFinal: Boolean
                 ) {
-                    val response = ChatResponse(message,jsonString, isFinal)
+                    val response = ChatResponse(
+                        message = message,
+                        params = params,
+                        jsonString = jsonString,
+                        isFinal = isFinal
+                    )
                     repository.sendResponseStream(response)
                 }
             })

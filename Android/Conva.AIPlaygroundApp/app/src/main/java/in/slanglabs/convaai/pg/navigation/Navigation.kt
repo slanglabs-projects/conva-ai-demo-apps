@@ -1,6 +1,7 @@
 package `in`.slanglabs.convaai.pg.navigation
 
 import androidx.compose.runtime.Composable
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
@@ -68,16 +69,25 @@ fun SetupNavigation(
         }
 
         composable(
-            route = Screen.ChatScreen.route + "/{appData}",
-            arguments = listOf(navArgument("appData") {
-                type = AppDataType()
-            })
-        ) {backStackEntry->
+            route = Screen.ChatScreen.route,
+            arguments = listOf(
+                navArgument("appData") { type = AppDataType() },
+                navArgument("assistantType") { type = NavType.StringType },
+                navArgument("showInputBox") { type = NavType.BoolType },
+                navArgument("showBottomBar") { type = NavType.BoolType },
+            )
+        ) { backStackEntry->
             val appData = backStackEntry.arguments?.getParcelable<AppData>("appData")
+            val assistantType = backStackEntry.arguments?.getString("assistantType") ?: ""
+            val showInputBox = backStackEntry.arguments?.getBoolean("showInputBox") ?: false
+            val showBottomBar = backStackEntry.arguments?.getBoolean("showBottomBar") ?: false
             appData?.let {
                 ChatScreen(
                     viewModel = chatScreenViewModel,
-                    appData = it
+                    appData = it,
+                    assistantType = assistantType,
+                    showInputBox = showInputBox,
+                    showBottomBar = showBottomBar
                 )
             }
         }

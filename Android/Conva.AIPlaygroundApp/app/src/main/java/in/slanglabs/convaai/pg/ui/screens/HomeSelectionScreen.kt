@@ -44,7 +44,7 @@ fun HomeSelectionScreen(
             ) {
                 CardButtonBlock(
                     message = viewModel.qrCodeScanner,
-                    onClick = { it ->
+                    onClick = {
                         val destination = viewModel.onHomeSelection(it)
                         navController.navigate(destination)
                     },

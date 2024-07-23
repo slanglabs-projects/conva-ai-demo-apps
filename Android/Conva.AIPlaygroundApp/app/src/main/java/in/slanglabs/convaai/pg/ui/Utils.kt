@@ -2,6 +2,7 @@ package `in`.slanglabs.convaai.pg.ui;
 
 import `in`.slanglabs.convaai.pg.BuildConfig
 import `in`.slanglabs.convaai.pg.model.AppData
+import `in`.slanglabs.convaai.pg.model.ChatHistory
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json
 
@@ -19,8 +20,12 @@ class Utils {
             capability_groups = HashMap()
         )
 
-        fun getChatMessage(firstString: String, secondString: String): Pair<String, String> {
-            return firstString to secondString
+        fun getChatMessage(firstString: String, secondString: String, params: String): ChatHistory {
+            return ChatHistory(
+                firstString,
+                secondString,
+                params
+            )
         }
 
         fun parseJson(jsonString: String): AppData {

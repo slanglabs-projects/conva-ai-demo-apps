@@ -2,6 +2,8 @@ package `in`.slanglabs.convaai.pg.ui.blocks
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.shape.CornerSize
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
@@ -15,9 +17,12 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Color.Companion.Transparent
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 
@@ -27,19 +32,18 @@ fun DropDownBlock(
     title: String,
     value: String,
     itemList: List<String>,
-    modifier: Modifier = Modifier,
     backgroundColor: Color = Color(0xFF222222),
     onBackgroundColor: Color = Color.White,
     onItemSelected: (String) -> Unit
 ) {
     var expanded by remember { mutableStateOf(false) }
+    val shape = RoundedCornerShape(8.dp)
 
     ExposedDropdownMenuBox(
         expanded = expanded,
         onExpandedChange = {
             expanded = !expanded
         },
-        modifier = modifier.background(backgroundColor)
     ) {
         TextField(
             modifier = Modifier
@@ -48,6 +52,7 @@ fun DropDownBlock(
             readOnly = true,
             value = value.trim(),
             onValueChange = { },
+            shape = shape,
             label = {
                 Text(
                     text = title, color = onBackgroundColor, maxLines = 1,
@@ -63,8 +68,8 @@ fun DropDownBlock(
                 containerColor = backgroundColor,
                 focusedLabelColor = onBackgroundColor,
                 unfocusedLabelColor = onBackgroundColor,
-                focusedTrailingIconColor = onBackgroundColor,
-                unfocusedTrailingIconColor = onBackgroundColor
+                focusedIndicatorColor = Color.Transparent,
+                unfocusedIndicatorColor = Color.Transparent
             ),
             textStyle = TextStyle(color = onBackgroundColor, fontSize = 12.sp),
             singleLine = true,

@@ -1,24 +1,14 @@
 package `in`.slanglabs.convaai.pg.ui.blocks
 
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.IntrinsicSize
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.*
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -33,13 +23,14 @@ fun MessageBlock(
     onPrimaryColor: Color = Color.White,
     secondColor: Color = Color(0xFF414141),
     onSecondaryColor: Color = Color.White,
+    params: String = "",
     onSecondStringShown: (Boolean) -> Unit = {}
 ) {
     var showSecondString by remember { mutableStateOf(false) }
     val messageToShow =
         if (showSecondString && secondString.isNotEmpty()) secondString else defaultMessage
-    val context = LocalContext.current
 
+    val codeToShow = if (showSecondString && secondString.isNotEmpty()) secondString else params
     val backgroundColor = if (messageType == MessageType.PRIMARY) primaryColor else secondColor
     val onBackgroundColor =
         if (messageType == MessageType.PRIMARY) onPrimaryColor else onSecondaryColor
@@ -67,12 +58,27 @@ fun MessageBlock(
                 defaultElevation = 4.dp
             )
         ) {
-            Text(
-                text = messageToShow,
-                style = TextStyle(fontSize = 16.sp),
-                color = onBackgroundColor,
-                modifier = Modifier.padding(8.dp)
-            )
+            Column(
+                horizontalAlignment = Alignment.Start,
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                if (messageType == MessageType.PRIMARY || !showSecondString) {
+                    Text(
+                        text = messageToShow,
+                        style = TextStyle(fontSize = 16.sp),
+                        color = onBackgroundColor,
+                        modifier = Modifier.padding(8.dp)
+                    )
+                }
+
+                if (messageType == MessageType.SECONDARY && codeToShow.isNotEmpty()) {
+                    Spacer(modifier = Modifier.height(8.dp))
+                    CodeBox(
+                        code = codeToShow,
+                        modifier = Modifier.padding(start = 8.dp, end = 8.dp, bottom = 8.dp)
+                    )
+                }
+            }
         }
     }
 }
@@ -86,7 +92,8 @@ enum class MessageType {
 @Composable
 fun MessageBlockPreview() {
     MessageBlock(
-        defaultMessage = "Hey how can i help you",
-        secondString = "{text : \"Hey how can i help you \"}"
+        defaultMessage = "Hey how can I help you?",
+        secondString = "{text : \"Hey how can I help you?\"}",
+        messageType = MessageType.SECONDARY
     )
 }

@@ -26,13 +26,14 @@ class SelectionViewModel () : ViewModel() {
         }
     }
 
-    fun onAssistantSelected(assistantType: String, appData: AppData) : String {
-        val json = Uri.encode(Gson().toJson(appData))
-        return when(assistantType) {
-            ConvaAISDKType.COPILOT_SDK.typeValue ->
-                Screen.AssistantResponseScreen.route + "/${json}"
-            else -> Screen.ChatScreen.route + "/${json}"
-        }
+    fun onAssistantSelected(assistantType: String, appData: AppData, showInputBox: Boolean, showBottomBar: Boolean) : String {
+        val jsonAppData = Uri.encode(Gson().toJson(appData))
+        return Screen.ChatScreen.createRoute(
+            assistantType = assistantType,
+            appData = jsonAppData,
+            showInputBox = showInputBox,
+            showBottomBar = showBottomBar
+        )
     }
 
     fun onBarcodeScanned(scannedData: String) : String {

@@ -7,7 +7,7 @@ import `in`.slanglabs.convaai.pg.Repository
 import `in`.slanglabs.convaai.pg.convaai.implementation.convaAICopilot.ConavAICopilotImpl
 import `in`.slanglabs.convaai.pg.convaai.implementation.convaAICopilot.ConvaAICopilotFacade
 import `in`.slanglabs.convaai.pg.convaai.implementation.convaAICopilot.ConvaAICopilotLifecycleObserver
-import `in`.slanglabs.convaai.pg.convaai.implementation.convaAICopilot.ConvaAICopilotResponserListener
+import `in`.slanglabs.convaai.pg.convaai.implementation.convaAICopilot.ConvaAICopilotResponseListener
 import `in`.slanglabs.convaai.pg.model.ChatResponse
 
 class ConvaAICopilotInterface(private val application: Application) {
@@ -20,21 +20,36 @@ class ConvaAICopilotInterface(private val application: Application) {
         startActivity: Activity
     ) {
         val repository: Repository = (application as App).repository
-        convaAICopilot = ConavAICopilotImpl(application,  object : ConvaAICopilotResponserListener {
-            override fun onResponse(jsonString: String) {
-                val response = ChatResponse(jsonString = jsonString)
+        convaAICopilot = ConavAICopilotImpl(application,  object : ConvaAICopilotResponseListener {
+            override fun onResponse(message: String, params: Map<String, Any>, jsonString: String) {
+                val response = ChatResponse(
+                    message = message,
+                    params = params,
+                    jsonString = jsonString
+                )
                 repository.sendResponse(response)
             }
         }, object : ConvaAICopilotLifecycleObserver {
             override fun onInitSuccessful() {
                 repository.setConvaAIInitialized(true)
+                setGlobalTrigger()
+                showUI(startActivity)
             }
 
             override fun onInitFailure(errorMessage: String) {
                 repository.setConvaAIInitialized(false,errorMessage)
             }
+
+            override fun onTextDetected(text: String) {
+                repository.setTextDetected(text)
+            }
         })
-        convaAICopilot?.initialiseCopilot(assistantID,assistantKey,assistantVersion,startActivity)
+        convaAICopilot?.initialiseCopilot(
+            assistantID,
+            assistantKey,
+            assistantVersion,
+            startActivity
+        )
     }
 
     fun invokeCopilotService(activity: Activity) {
@@ -47,5 +62,9 @@ class ConvaAICopilotInterface(private val application: Application) {
 
     fun shutdown() {
         convaAICopilot?.shutdown()
+    }
+
+    fun setGlobalTrigger() {
+        convaAICopilot?.setGlobalTrigger()
     }
 }

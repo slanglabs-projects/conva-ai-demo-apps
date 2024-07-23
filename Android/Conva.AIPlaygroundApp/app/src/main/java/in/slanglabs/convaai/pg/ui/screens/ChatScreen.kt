@@ -45,10 +45,13 @@ import `in`.slanglabs.convaai.pg.ui.viewModel.viewModels.ChatScreenViewModel
 @Composable
 fun ChatScreen(
     viewModel: ChatScreenViewModel,
-    appData: AppData
+    appData: AppData,
+    assistantType: String,
+    showInputBox: Boolean,
+    showBottomBar: Boolean
     ) {
     LaunchedEffect(Unit) {
-        viewModel.initializeAssistant(appData)
+        viewModel.initializeAssistant(appData, assistantType)
     }
     val uiState by viewModel.uiState.collectAsState()
     val isTrailingIconEnabled by viewModel.isTrailingIconEnabled.collectAsState(true)
@@ -94,29 +97,31 @@ fun ChatScreen(
                     onMessageClicked= {
                     viewModel.onMessageClicked()
                 })
-                TextField(
-                    value = viewModel.message.value,
-                    onValueChange = { it ->
-                        viewModel.onTextValueChanged(it)
-                    },
-                    modifier = Modifier.fillMaxWidth(),
-                    placeholder = { Text(uiState.placeholder, color = Color(0xFF858585)) },
-                    textStyle = TextStyle(fontSize = 18.sp),
-                    trailingIcon = {
-                        Row (
-                            modifier = Modifier.padding(end = 8.dp),
-                            verticalAlignment = Alignment.CenterVertically
-                        ) {
+
+                if (showInputBox) {
+                    TextField(
+                        value = viewModel.message.value,
+                        onValueChange = { it ->
+                            viewModel.onTextValueChanged(it)
+                        },
+                        modifier = Modifier.fillMaxWidth(),
+                        placeholder = { Text(uiState.placeholder, color = Color(0xFF858585)) },
+                        textStyle = TextStyle(fontSize = 18.sp),
+                        trailingIcon = {
+                            Row (
+                                modifier = Modifier.padding(end = 8.dp),
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
                                 PulsatingMicBlock(onClick = {
                                     hideKeyboard()
                                     viewModel.onMicClicked()
                                 }, animate = isListening)
-                            Spacer(modifier = Modifier.width(8.dp))
-                            Icon(
-                                modifier = Modifier.clickable {
-                                    if (isTrailingIconEnabled) {
-                                        sendMessage()
-                                    }
+                                Spacer(modifier = Modifier.width(8.dp))
+                                Icon(
+                                    modifier = Modifier.clickable {
+                                        if (isTrailingIconEnabled) {
+                                            sendMessage()
+                                        }
                                     },
                                     imageVector = Icons.Filled.Send,
                                     contentDescription = null,
@@ -124,33 +129,38 @@ fun ChatScreen(
                                         0xFF858585
                                     )
                                 )
-                        }
-                    },
-                    colors = TextFieldDefaults.textFieldColors(
-                        cursorColor = Color(0xFF858585),
-                        textColor = Color(0xFFFFFFFF),
-                        focusedTrailingIconColor = Color(0xFFFFFFFF),
-                        unfocusedTrailingIconColor = Color(0xFFFFFFFF),
-                        containerColor = Color(0xFF222222),
-                        focusedIndicatorColor = Color.Transparent,
-                        unfocusedIndicatorColor = Color.Transparent),
-                    keyboardOptions = KeyboardOptions.Default.copy(
-                        imeAction = ImeAction.Send
-                    ),
-                    keyboardActions = KeyboardActions(
-                        onSend = {
-                            sendMessage()
+                            }
+                        },
+                        colors = TextFieldDefaults.textFieldColors(
+                            cursorColor = Color(0xFF858585),
+                            textColor = Color(0xFFFFFFFF),
+                            focusedTrailingIconColor = Color(0xFFFFFFFF),
+                            unfocusedTrailingIconColor = Color(0xFFFFFFFF),
+                            containerColor = Color(0xFF222222),
+                            focusedIndicatorColor = Color.Transparent,
+                            unfocusedIndicatorColor = Color.Transparent),
+                        keyboardOptions = KeyboardOptions.Default.copy(
+                            imeAction = ImeAction.Send
+                        ),
+                        keyboardActions = KeyboardActions(
+                            onSend = {
+                                sendMessage()
+                            }
+                        )
+                    )
+                }
+
+                if (showBottomBar) {
+                    BottomBarBlock(
+                        assistantCapabilitiesGroups = uiState.capabilityGroupList,
+                        selectedCapabilityGroup = uiState.capabilityGroup,
+                        assistantCapabilities = uiState.capabilityList,
+                        selectedCapability = uiState.capability,
+                        onCapabilityUpdate = { capabilitiesGroups, capabilitySelected ->
+                            viewModel.onCapabilityUpdated(capabilitiesGroups,capabilitySelected)
                         }
                     )
-                )
-                BottomBarBlock(
-                    assistantCapabilitiesGroups = uiState.capabilityGroupList,
-                    selectedCapabilityGroup = uiState.capabilityGroup,
-                    assistantCapabilities = uiState.capabilityList,
-                    selectedCapability = uiState.capability,
-                    onCapabilityUpdate = { capabilitiesGroups, capabilitySelected ->
-                        viewModel.onCapabilityUpdated(capabilitiesGroups,capabilitySelected)
-                    })
+                }
             }
         }
     }
