@@ -43,7 +43,6 @@ class ConvaAICoreImpl(private val mApplication: Application): ConvaAICoreFacade 
      * Sends a single-shot request to the ConvaAICore and handles the response.
      *
      * @param text The input text for the ConvaAICore.
-     * @param capabilityGroupSelected The selected capability group.
      * @param capabilitySelected The selected capability.
      * @param responseCallBack The callback listener for the response.
      */
@@ -58,10 +57,15 @@ class ConvaAICoreImpl(private val mApplication: Application): ConvaAICoreFacade 
                     input = text, capability = capabilitySelected, context = ConvaAIContext(history = conversationHistory)
                 )
                 conversationHistory = response.history
-                responseCallBack.onResponse(response.message, response.params, response.responseString)
+                responseCallBack.onResponse(
+                    message = response.message,
+                    params = response.params,
+                    jsonString = response.responseString,
+                    capability = response.capability
+                )
             } catch (e: Exception) {
                 // Handle Exception
-                responseCallBack.onResponse("Error while sending the request, Please try again", emptyMap(),  e.message ?: "")
+                responseCallBack.onResponse("Error while sending the request, Please try again", emptyMap(), e.message ?: "", "")
             }
         }
     }
@@ -84,10 +88,15 @@ class ConvaAICoreImpl(private val mApplication: Application): ConvaAICoreFacade 
                     input = text, capabilityGroup = capabilityGroupSelected, context = ConvaAIContext(history = conversationHistory)
                 )
                 conversationHistory = response.history
-                responseCallBack.onResponse(response.message, response.params, response.responseString)
+                responseCallBack.onResponse(
+                    message = response.message,
+                    params = response.params,
+                    jsonString = response.responseString,
+                    capability = response.capability
+                )
             } catch (e: Exception) {
                 // Handle Exception
-                responseCallBack.onResponse("Error while sending the request, Please try again", emptyMap(),e.message ?: "")
+                responseCallBack.onResponse("Error while sending the request, Please try again", emptyMap(), e.message ?: "", "")
             }
         }
     }
@@ -96,7 +105,6 @@ class ConvaAICoreImpl(private val mApplication: Application): ConvaAICoreFacade 
      * Sends a streaming request to the ConvaAICore and handles the response.
      *
      * @param text The input text for the ConvaAICore.
-     * @param capabilityGroupSelected The selected capability group.
      * @param capabilitySelected The selected capability.
      * @param responseCallBack The callback listener for the response.
      */
@@ -114,10 +122,11 @@ class ConvaAICoreImpl(private val mApplication: Application): ConvaAICoreFacade 
                         override fun onResponse(response: Response, isFinal: Boolean) {
                             conversationHistory = response.history
                             responseCallBack.onResponseStream(
-                                response.message,
-                                response.params,
-                                response.responseString,
-                                response.isFinal
+                                message = response.message,
+                                params = response.params,
+                                jsonString = response.responseString,
+                                capability = response.capability,
+                                isFinal = response.isFinal
                             )
                         }
 
@@ -129,7 +138,7 @@ class ConvaAICoreImpl(private val mApplication: Application): ConvaAICoreFacade 
                 )
             } catch (e: Exception) {
                 // Handle Exception
-                responseCallBack.onResponse("Error while sending the request, Please try again", emptyMap(),  e.message ?: "")
+                responseCallBack.onResponse("Error while sending the request, Please try again", emptyMap(), e.message ?: "", "")
             }
         }
     }
@@ -148,10 +157,11 @@ class ConvaAICoreImpl(private val mApplication: Application): ConvaAICoreFacade 
                         override fun onResponse(response: Response, isFinal: Boolean) {
                             conversationHistory = response.history
                             responseCallBack.onResponseStream(
-                                response.message,
-                                response.params,
-                                response.responseString,
-                                response.isFinal
+                                message = response.message,
+                                params = response.params,
+                                jsonString = response.responseString,
+                                capability = response.capability,
+                                isFinal = response.isFinal
                             )
                         }
 
@@ -163,7 +173,7 @@ class ConvaAICoreImpl(private val mApplication: Application): ConvaAICoreFacade 
                 )
             } catch (e: Exception) {
                 // Handle Exception
-                responseCallBack.onResponse("Error while sending the request, Please try again", emptyMap(),  e.message ?: "")
+                responseCallBack.onResponse("Error while sending the request, Please try again", emptyMap(), e.message ?: "", "")
             }
         }
     }

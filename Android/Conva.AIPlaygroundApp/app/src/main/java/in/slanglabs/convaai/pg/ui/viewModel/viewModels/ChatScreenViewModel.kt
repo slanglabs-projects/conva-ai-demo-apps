@@ -12,6 +12,8 @@ import `in`.slanglabs.convaai.pg.ConvaAICopilotState
 import `in`.slanglabs.convaai.pg.R
 import `in`.slanglabs.convaai.pg.Repository
 import `in`.slanglabs.convaai.pg.model.AppData
+import `in`.slanglabs.convaai.pg.model.LegacyAppData
+import `in`.slanglabs.convaai.pg.model.RichAppData
 import `in`.slanglabs.convaai.pg.ui.Utils
 import `in`.slanglabs.convaai.pg.ui.uiStates.ChatScreenUiState
 import kotlinx.coroutines.flow.Flow
@@ -68,7 +70,7 @@ class ChatScreenViewModel(application: Application, private val activityReferenc
                 _uiState.update { currentState ->
                     val updatedChatHistory = currentState.chatHistory.toMutableList()
                     updatedChatHistory.add(
-                        Utils.getChatMessage("$USER: $text", "", "")
+                        Utils.getChatMessage("$USER: $text", "", "", "")
                     )
                     currentState.copy(
                         chatHistory = updatedChatHistory,
@@ -83,6 +85,7 @@ class ChatScreenViewModel(application: Application, private val activityReferenc
                 val message = chatResponse.message
                 val messageJson = chatResponse.jsonString
                 val params = chatResponse.params
+                val capability = chatResponse.capability
 
                 _uiState.update { currentState ->
                     val updatedChatHistory = currentState.chatHistory.toMutableList()
@@ -90,7 +93,8 @@ class ChatScreenViewModel(application: Application, private val activityReferenc
                         Utils.getChatMessage(
                             "$COPILOT: $message",
                             messageJson,
-                            repository.mapToPrettyJsonString(params)
+                            repository.mapToPrettyJsonString(params),
+                            capability
                         )
                     )
                     currentState.copy(
@@ -129,6 +133,27 @@ class ChatScreenViewModel(application: Application, private val activityReferenc
     }
 
     fun onCapabilityUpdated(selectedCapabilityGroup: String, selectedCapability: String) {
+        if (!::appData.isInitialized) return
+
+        if (appData is LegacyAppData) {
+            capabilityGroupUpdated(selectedCapabilityGroup, selectedCapability)
+        } else if (appData is RichAppData) {
+            capabilityUpdated(selectedCapabilityGroup, selectedCapability)
+        }
+    }
+
+    private fun capabilityUpdated(selectedCapabilityGroup: String, selectedCapability: String) {
+
+        _uiState.update { currentState ->
+
+            currentState.copy(
+                capabilityGroup = selectedCapabilityGroup,
+                capability = selectedCapability
+            )
+        }
+    }
+
+    private fun capabilityGroupUpdated(selectedCapabilityGroup: String, selectedCapability: String) {
 
         _uiState.update { currentState ->
 
@@ -139,7 +164,7 @@ class ChatScreenViewModel(application: Application, private val activityReferenc
             if (selectedCapabilityGroup != capabilityGroup) {
                 capabilityGroup = selectedCapabilityGroup
 
-                capabilityList = Utils.getAssistantCapabilities(appData,
+                capabilityList = Utils.getAssistantCapabilities(appData as LegacyAppData,
                     capabilityGroup.ifEmpty { DEFAULT })
                 capability = capabilityList[0]
             } else {
@@ -154,7 +179,28 @@ class ChatScreenViewModel(application: Application, private val activityReferenc
         }
     }
 
-    private fun updateCapabilityGroupList(appData: AppData, list: List<String>) {
+    private fun updateCapability(appData: AppData) {
+        if (appData is LegacyAppData) {
+            updateCapabilityGroupList(appData, Utils.getAssistantCapabilityGroup(appData))
+        } else if (appData is RichAppData) {
+            updateCapabilityList(appData.capability_groups, appData.capabilities)
+        }
+    }
+
+    private fun updateCapabilityList(capabilityGroup: List<String>, capability: List<String>,) {
+        if (capabilityGroup.isEmpty() || capability.isEmpty()) return
+
+        _uiState.update { currentState ->
+            currentState.copy(
+                capabilityGroup = capabilityGroup[0],
+                capabilityGroupList = capabilityGroup,
+                capability = capability[0],
+                capabilityList = capability
+            )
+        }
+    }
+
+    private fun updateCapabilityGroupList(appData: LegacyAppData, list: List<String>) {
         _uiState.update { currentState ->
             val capabilityGroup = list[0]
             val capabilityList = Utils.getAssistantCapabilities(appData, capabilityGroup)
@@ -175,7 +221,7 @@ class ChatScreenViewModel(application: Application, private val activityReferenc
             _uiState.update { currentState ->
                 val updatedChatHistory = currentState.chatHistory.toMutableList()
                 updatedChatHistory.add(
-                    Utils.getChatMessage("$USER: $text", "", "")
+                    Utils.getChatMessage("$USER: $text", "", "","")
                 )
                 currentState.copy(
                     chatHistory = updatedChatHistory,
@@ -215,7 +261,7 @@ class ChatScreenViewModel(application: Application, private val activityReferenc
             cacheAppData(appData)
             cacheAssistantType(assistantType)
             initAssistant(appData, assistantType)
-            updateCapabilityGroupList(appData, Utils.getAssistantCapabilityGroup(appData))
+            updateCapability(appData)
         }
     }
 

@@ -21,10 +21,11 @@ class ConvaAICopilotInterface(private val application: Application) {
     ) {
         val repository: Repository = (application as App).repository
         convaAICopilot = ConavAICopilotImpl(application,  object : ConvaAICopilotResponseListener {
-            override fun onResponse(message: String, params: Map<String, Any>, jsonString: String) {
+            override fun onResponse(message: String, params: Map<String, Any>, jsonString: String, capability: String) {
                 val response = ChatResponse(
                     message = message,
                     params = params,
+                    capability = capability,
                     jsonString = jsonString
                 )
                 repository.sendResponse(response)

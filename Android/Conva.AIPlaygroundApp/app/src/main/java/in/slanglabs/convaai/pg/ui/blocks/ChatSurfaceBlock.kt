@@ -22,7 +22,7 @@ fun ChatSurfaceBlock(
     Column(modifier = Modifier
         .fillMaxSize()
         .verticalScroll(scrollState)) {
-        chatHistoryList.forEach { (firstString, secondString, params) ->
+        chatHistoryList.forEach { (firstString, secondString, params, capability) ->
             AnimatedVisibility(
                 visible = true,
                 enter = fadeIn(),
@@ -32,6 +32,7 @@ fun ChatSurfaceBlock(
                     defaultMessage = firstString,
                     secondString = secondString,
                     params = params,
+                    capability = capability,
                     messageType =
                     if (firstString.trim().startsWith("${ChatScreenViewModel.USER}:")) MessageType.PRIMARY
                     else MessageType.SECONDARY,

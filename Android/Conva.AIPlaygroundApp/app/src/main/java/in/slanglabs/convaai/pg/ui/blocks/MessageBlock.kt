@@ -23,7 +23,8 @@ fun MessageBlock(
     onPrimaryColor: Color = Color.White,
     secondColor: Color = Color(0xFF414141),
     onSecondaryColor: Color = Color.White,
-    params: String = "",
+    params: String,
+    capability: String,
     onSecondStringShown: (Boolean) -> Unit = {}
 ) {
     var showSecondString by remember { mutableStateOf(false) }
@@ -75,6 +76,7 @@ fun MessageBlock(
                     Spacer(modifier = Modifier.height(8.dp))
                     CodeBox(
                         code = codeToShow,
+                        capability = capability,
                         modifier = Modifier.padding(start = 8.dp, end = 8.dp, bottom = 8.dp)
                     )
                 }
@@ -86,14 +88,4 @@ fun MessageBlock(
 enum class MessageType {
     PRIMARY,
     SECONDARY
-}
-
-@Preview
-@Composable
-fun MessageBlockPreview() {
-    MessageBlock(
-        defaultMessage = "Hey how can I help you?",
-        secondString = "{text : \"Hey how can I help you?\"}",
-        messageType = MessageType.SECONDARY
-    )
 }

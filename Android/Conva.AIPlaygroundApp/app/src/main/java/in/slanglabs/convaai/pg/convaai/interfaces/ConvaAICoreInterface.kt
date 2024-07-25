@@ -42,11 +42,12 @@ class ConvaAICoreInterface(private val application: Application) {
             text,
             capabilityGroupSelected,
             object : ConvaAICoreResponseListener {
-                override fun onResponse(message: String, params: Map<String, Any>, jsonString: String) {
+                override fun onResponse(message: String, params: Map<String, Any>, jsonString: String, capability: String,) {
                     val repository: Repository = (application as App).repository
                     val response = ChatResponse(
                         message = message,
                         params = params,
+                        capability = capability,
                         jsonString = jsonString
                     )
                     repository.sendResponse(response)
@@ -59,11 +60,12 @@ class ConvaAICoreInterface(private val application: Application) {
             text,
             capabilitySelected,
             object : ConvaAICoreResponseListener {
-                override fun onResponse(message: String, params: Map<String, Any>, jsonString: String) {
+                override fun onResponse(message: String, params: Map<String, Any>, jsonString: String, capability: String) {
                     val repository: Repository = (application as App).repository
                     val response = ChatResponse(
                         message = message,
                         params = params,
+                        capability = capability,
                         jsonString = jsonString
                     )
                     repository.sendResponse(response)
@@ -90,12 +92,14 @@ class ConvaAICoreInterface(private val application: Application) {
                     message: String,
                     params: Map<String, Any>,
                     jsonString: String,
+                    capability: String,
                     isFinal: Boolean
                 ) {
                     val response = ChatResponse(
                         message = message,
                         params = params,
                         jsonString = jsonString,
+                        capability = capability,
                         isFinal = isFinal
                     )
                     repository.sendResponseStream(response)
@@ -114,12 +118,14 @@ class ConvaAICoreInterface(private val application: Application) {
                     message: String,
                     params: Map<String, Any>,
                     jsonString: String,
+                    capability: String,
                     isFinal: Boolean
                 ) {
                     val response = ChatResponse(
                         message = message,
                         params = params,
                         jsonString = jsonString,
+                        capability = capability,
                         isFinal = isFinal
                     )
                     repository.sendResponseStream(response)

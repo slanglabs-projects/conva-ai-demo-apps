@@ -115,7 +115,8 @@ class ConavAICopilotImpl(private val application: Application, responseCallBack:
                     listener.onResponse(
                         message = response.message,
                         params = response.params,
-                        jsonString = response.responseString
+                        jsonString = response.responseString,
+                        capability = response.capability
                     )
                 }
             }

@@ -21,11 +21,11 @@ import android.widget.Toast
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.res.painterResource
 import `in`.slanglabs.convaai.pg.R
-import androidx.compose.ui.tooling.preview.Preview
 
 @Composable
 fun CodeBox(
     code: String,
+    capability: String,
     modifier: Modifier = Modifier
 ) {
     val context = LocalContext.current
@@ -38,48 +38,70 @@ fun CodeBox(
             .border(1.dp, Color.Gray, shape = RoundedCornerShape(8.dp))
             .padding(8.dp)
     ) {
-        Box(
-            modifier = Modifier
-                .align(Alignment.TopEnd)
-                .background(Color.Black, shape = RoundedCornerShape(4.dp))
-                .border(1.dp, Color.Gray, shape = RoundedCornerShape(4.dp))
-                .padding(2.dp)
-                .padding(start = 2.dp, end = 2.dp)
-        ) {
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                IconButton(
-                    onClick = {
-                        val clip = ClipData.newPlainText("Code", code)
-                        clipboardManager.setPrimaryClip(clip)
-                        Toast.makeText(context, "Code copied to clipboard", Toast.LENGTH_SHORT).show()
-                    },
-                    modifier = Modifier.size(16.dp)
-                        .padding(1.dp)
+        Column(modifier = Modifier
+            .fillMaxSize()) {
+
+            Row(modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween ) {
+                Box(
+                    modifier = Modifier
+                        .background(Color(0xFFF39200), shape = RoundedCornerShape(4.dp))
+                        .border(1.dp, Color.Gray, shape = RoundedCornerShape(4.dp))
+                        .padding(start = 4.dp, end = 4.dp, top = 2.dp, bottom = 2.dp)
+                        .weight(1f, fill = false)
                 ) {
-                    Icon(
-                        painter = painterResource(id = R.drawable.ic_baseline_content_copy_24),
-                        contentDescription = "Copy",
-                        tint = Color.White
+                    Text(
+                        text = capability,
+                        style = TextStyle(fontSize = 14.sp, color = Color.White),
+                        modifier = Modifier
+                            .align(Alignment.Center)
                     )
                 }
-                Text(
-                    text = "Copy",
-                    style = TextStyle(fontSize = 12.sp, color = Color.White),
-                    modifier = Modifier.padding(start = 4.dp)
-                )
-            }
-        }
 
-        Text(
-            text = code,
-            style = TextStyle(
-                fontFamily = FontFamily.Monospace,
-                fontSize = 14.sp,
-                color = Color.White
-            ),
-            modifier = Modifier
-                .align(Alignment.TopStart)
-                .padding(top= 20.dp, end = 10.dp)
-        )
+                Spacer(modifier = Modifier.width(8.dp))
+
+                Box(
+                    modifier = Modifier
+                        .background(Color.Black, shape = RoundedCornerShape(4.dp))
+                        .border(1.dp, Color.Gray, shape = RoundedCornerShape(4.dp))
+                        .padding(start = 4.dp, end = 4.dp, top = 2.dp, bottom = 2.dp)
+                ) {
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        IconButton(
+                            onClick = {
+                                val clip = ClipData.newPlainText("Code", code)
+                                clipboardManager.setPrimaryClip(clip)
+                                Toast.makeText(context, "Code copied to clipboard", Toast.LENGTH_SHORT).show()
+                            },
+                            modifier = Modifier.size(16.dp)
+                                .padding(1.dp)
+                        ) {
+                            Icon(
+                                painter = painterResource(id = R.drawable.ic_baseline_content_copy_24),
+                                contentDescription = "Copy",
+                                tint = Color.White
+                            )
+                        }
+                        Text(
+                            text = "Copy",
+                            style = TextStyle(fontSize = 14.sp, color = Color.White),
+                            modifier = Modifier.padding(start = 4.dp)
+                        )
+                    }
+                }
+            }
+
+            Text(
+                text = code,
+                style = TextStyle(
+                    fontFamily = FontFamily.Monospace,
+                    fontSize = 14.sp,
+                    color = Color.White
+                ),
+                modifier = Modifier
+                    .padding(top= 8.dp, end = 10.dp)
+            )
+
+        }
     }
 }
