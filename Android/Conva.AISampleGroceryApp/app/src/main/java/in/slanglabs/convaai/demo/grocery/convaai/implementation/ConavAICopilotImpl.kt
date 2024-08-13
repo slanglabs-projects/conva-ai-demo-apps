@@ -108,7 +108,7 @@ class ConavAICopilotImpl(private val application: Application, responseCallBack:
      * @param activity The activity in which to show the UI
      */
     override fun showUI(activity: Activity) {
-        ConvaAICopilot.builtinUI.show(activity)
+        ConvaAICopilot.attach(activity)
     }
 
     /**
@@ -140,10 +140,6 @@ class ConavAICopilotImpl(private val application: Application, responseCallBack:
             override fun onSessionStart(isVoice: Boolean) {}
 
             override fun onSessionEnd(isCanceled: Boolean) {}
-
-            override fun onOnboardingSuccess() {}
-
-            override fun onOnboardingFailure() {}
 
             override fun onAppBackgrounded() {}
 
