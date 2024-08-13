@@ -13,8 +13,8 @@ android {
         applicationId = "in.slanglabs.convaai.pg"
         minSdk = 24
         targetSdk = 34
-        versionCode = 4
-        versionName = "2.1"
+        versionCode = 6
+        versionName = "2.3"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -98,7 +98,7 @@ dependencies {
     implementation("androidx.compose.foundation:foundation-android:1.6.7")
 
     // Slang implementations
-    implementation ("in.slanglabs.conva:conva-ai-copilot:2.3.2-beta")
+    implementation ("in.slanglabs.conva:conva-ai-copilot:1.0.0-beta")
 
     implementation("androidx.camera:camera-camera2:1.2.2")
     implementation("androidx.camera:camera-lifecycle:1.2.2")

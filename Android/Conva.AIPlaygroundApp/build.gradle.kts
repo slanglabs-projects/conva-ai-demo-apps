@@ -10,6 +10,6 @@ allprojects {
         google()
         mavenCentral()
         gradlePluginPortal()
-        maven("https://gitlab.com/api/v4/projects/25890120/packages/maven")
+        maven("https://gitlab.com/api/v4/projects/25706948/packages/maven")
     }
 }

@@ -136,6 +136,7 @@ class Repository(
 
     fun startListening(activity: Activity) {
         clearASRData()
+        skipTTS()
         convaAISpeechInterface.startListening(activity)
     }
 

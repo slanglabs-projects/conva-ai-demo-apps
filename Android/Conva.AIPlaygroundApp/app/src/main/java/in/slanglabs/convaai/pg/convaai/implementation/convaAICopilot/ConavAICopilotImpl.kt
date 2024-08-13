@@ -7,7 +7,7 @@ import `in`.slanglabs.convaai.copilot.platform.ConvaAIInteraction
 import `in`.slanglabs.convaai.copilot.platform.ConvaAIOptions
 import `in`.slanglabs.convaai.copilot.platform.ConvaAIResponse
 import `in`.slanglabs.convaai.copilot.platform.action.ConvaAIHandler
-import `in`.slanglabs.convaai.copilot.platform.action.ConvaAIUtteranceListener
+import `in`.slanglabs.convaai.copilot.platform.action.ConvaAIInputListener
 import `in`.slanglabs.convaai.copilot.platform.template.ConvaAIAppConfigs
 import `in`.slanglabs.convaai.core.ConvaAI
 
@@ -47,7 +47,7 @@ class ConavAICopilotImpl(private val application: Application, responseCallBack:
         val options = ConvaAIOptions.Builder()
             .setListener(getConvaAICopilotListener())
             .setCapabilityHandler(getConvaAICopilotAction())
-            .setUtteranceListener(getConvaAIUtteranceListener())
+            .setInputListener(getConvaAIInputListener())
 
         options.setStartActivity(startActivity)
 
@@ -85,12 +85,14 @@ class ConavAICopilotImpl(private val application: Application, responseCallBack:
         ConvaAICopilot.builtinUI.show(activity)
     }
 
-    private fun getConvaAIUtteranceListener() : ConvaAIUtteranceListener {
-        return ConvaAIUtteranceListener { text ->
-            text?.let {
-                // TODO:- Once the SDK provide callback for all types of text source,
-                //      we will provide the text detected from this callback instead of sending
-                //      input from response.
+    private fun getConvaAIInputListener() : ConvaAIInputListener {
+        return object : ConvaAIInputListener {
+            override fun onTextDetected(userInput: String) {
+                lifecycleObserver.onTextDetected(userInput)
+            }
+
+            override fun onUtteranceDetected(utterance: String) {
+                lifecycleObserver.onTextDetected(utterance)
             }
         }
     }
@@ -111,7 +113,6 @@ class ConavAICopilotImpl(private val application: Application, responseCallBack:
              */
             override fun onCapability(response: ConvaAIResponse, interactionData: ConvaAIInteraction, isFinal: Boolean) {
                 if (isFinal) {
-                    lifecycleObserver.onTextDetected(response.input)
                     listener.onResponse(
                         message = response.message,
                         params = response.params,
@@ -153,10 +154,6 @@ class ConavAICopilotImpl(private val application: Application, responseCallBack:
             override fun onSessionStart(isVoice: Boolean) {}
 
             override fun onSessionEnd(isCanceled: Boolean) {}
-
-            override fun onOnboardingSuccess() {}
-
-            override fun onOnboardingFailure() {}
 
             override fun onAppBackgrounded() {}
 
