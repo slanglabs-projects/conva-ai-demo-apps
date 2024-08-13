@@ -17,7 +17,7 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
         maven {
-            url = uri("https://gitlab.com/api/v4/projects/25890120/packages/maven")
+            url = uri("https://gitlab.com/api/v4/projects/25706948/packages/maven")
         }
     }
 }
