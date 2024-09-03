@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search and Start Conversation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        #search-bar {
+            width: calc(100% - 40px);
+            padding: 10px;
+            font-size: 16px;
+        }
+        #search-icon {
+            font-size: 20px;
+            vertical-align: middle;
+            cursor: pointer;
+            margin-left: -30px;
+        }
+        #start-conversation {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #response-container {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            text-align: left;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <button id="start-conversation" onclick="startConversation()">Start Conversation</button>
+    <div id="response-container"></div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        initializeConvaAICopilot();
+    });
+
+    function initializeConvaAICopilot() {
+        NativeInterface.initializeCopilot("id", "key", "version")
+    }
+
+    function startConversation() {
+        NativeInterface.startConversation();
+    }
+
+    function onCopilotInitialized() {
+        // Show a UI element to allow user interaction with the copilot
+    }
+
+    function onCopilotError(response) {
+        document.getElementById('response-container').innerText = response;
+    }
+
+    function onConvaAICopilotResponse(response) {
+        var responseDiv = document.getElementById("response-container");
+        try {
+            var jsonPretty = JSON.stringify(JSON.parse(response), null, 2);
+            responseDiv.innerHTML = "<pre>" + jsonPretty + "</pre>";
+        } catch (e) {
+            responseDiv.innerHTML = "Error parsing JSON: " + e.message;
+        }
+    }
+
+    function onConvaAICopilotSuggestion(suggestion) {
+        var responseDiv = document.getElementById("response-container");
+        try {
+            var jsonPretty = JSON.stringify(JSON.parse(suggestion), null, 2);
+            responseDiv.innerHTML = "<pre>" + jsonPretty + "</pre>";
+        } catch (e) {
+            responseDiv.innerHTML = "Error parsing JSON: " + e.message;
+        }
+    }
+</script>
+</body>
+</html>
