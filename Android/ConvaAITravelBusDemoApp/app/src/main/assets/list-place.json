@@ -1,0 +1,107 @@
+[
+  {
+    "id": "place1",
+    "city": "Bengaluru",
+    "state": "KA",
+    "stateFullName": "Karnataka",
+    "stop": "All Locations"
+  },
+  {
+    "id": "place2",
+    "city": "Bengaluru",
+    "state": "KA",
+    "stateFullName": "Karnataka",
+    "stop": "Kalasipalya"
+  },
+  {
+    "id": "place3",
+    "city": "Bengaluru",
+    "state": "KA",
+    "stateFullName": "Karnataka",
+    "stop": "Majestic"
+  },
+  {
+    "id": "place4",
+    "city": "Bengaluru",
+    "state": "KA",
+    "stateFullName": "Karnataka",
+    "stop": "Yesvantpur"
+  },
+  {
+    "id": "place5",
+    "city": "Bengaluru",
+    "state": "KA",
+    "stateFullName": "Karnataka",
+    "stop": "Jayanagar"
+  },
+  {
+    "id": "place6",
+    "city": "Chennai",
+    "state": "TN",
+    "stateFullName": "Tamil Nadu",
+    "stop": "All Locations"
+  },
+  {
+    "id": "place7",
+    "city": "Chennai",
+    "state": "TN",
+    "stateFullName": "Tamil Nadu",
+    "stop": "Koyambedu"
+  },
+  {
+    "id": "place8",
+    "city": "Chennai",
+    "state": "TN",
+    "stateFullName": "Tamil Nadu",
+    "stop": "Central"
+  },
+  {
+    "id": "place9",
+    "city": "Chennai",
+    "state": "TN",
+    "stateFullName": "Tamil Nadu",
+    "stop": "Egmore"
+  },
+  {
+    "id": "place10",
+    "city": "Chennai",
+    "state": "TN",
+    "stateFullName": "Tamil Nadu",
+    "stop": "T-nagar"
+  },
+  {
+    "id": "place12",
+    "city": "Mumbai",
+    "stateFullName": "Maharashtra",
+    "state": "MH",
+    "stop": "BST"
+  },
+  {
+    "id": "place14",
+    "city": "Hyderabad",
+    "state": "AP",
+    "stateFullName": "Andhra Pradesh",
+    "stop": "Central"
+  },
+  {
+    "id": "place16",
+    "city": "Vijayanagar",
+    "stateFullName": "Karnataka",
+    "state": "KA",
+    "stop": "Bus Stop"
+  },
+  {
+    "id": "place18",
+    "city": "Vijayanagar",
+    "stateFullName": "Andhra Pradesh",
+    "state": "AP",
+    "stop": "Bus Stop"
+  },
+  {
+    "id": "place19",
+    "city": "Hyderabad",
+    "stateFullName": "Andhra Pradesh",
+    "state": "AP",
+    "stop": "Bus Stop"
+  }
+]

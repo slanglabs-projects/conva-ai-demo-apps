@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<actions>
+    <action intentName="actions.intent.OPEN_APP_FEATURE">
+        <parameter name="feature">
+            <entity-set-reference entitySetId="FeatureEntitySet" />
+        </parameter>
+        <fulfillment urlTemplate="{@url}"/>
+        <fulfillment urlTemplate="app://slang.travel.home" />
+    </action>
+    <entity-set entitySetId="FeatureEntitySet">
+        <entity  url="app://slang.travel.bookings"
+            name="bookings" alternateName="booking"/>
+        <entity
+            name="home"
+            alternateName="@array/open_app_alternate_name"
+            url="app://slang.travel.home" />
+    </entity-set>
+</actions>

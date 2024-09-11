@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="open_app_alternate_name">
+        <item>slang</item>
+        <item>app</item>
+        <item></item>
+        <item> </item>
+        <item>slang travel</item>
+    </string-array>
+</resources>

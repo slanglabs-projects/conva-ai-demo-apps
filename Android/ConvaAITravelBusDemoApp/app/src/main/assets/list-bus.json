@@ -1,0 +1,86 @@
+[
+  {
+    "id": "bus1",
+    "name": "Bus #1",
+    "travels": "KSRTC",
+    "type": "A/C",
+    "starRating": 3.1
+  },
+  {
+    "id": "bus2",
+    "name": "Bus #2",
+    "travels": "VRL Travels",
+    "type": "Non A/C",
+    "starRating": 4.2
+  },
+  {
+    "id": "bus3",
+    "name": "Bus #3",
+    "type": "A/C",
+    "travels": "Durgamba Motors",
+    "starRating": 5.0
+  },
+  {
+    "id": "bus4",
+    "name": "Bus #4",
+    "type": "Non A/C",
+    "travels": "SRS Travels",
+    "starRating": 3.6
+  },
+  {
+    "id": "bus5",
+    "name": "Bus #5",
+    "type": "A/C",
+    "travels": "Anand Travels",
+    "starRating": 4.3
+  },
+  {
+    "id": "bus6",
+    "name": "Bus #6",
+    "type": "A/C",
+    "travels": "Ideal Travels",
+    "starRating": 4.7
+  },
+  {
+    "id": "bus7",
+    "name": "Bus #7",
+    "type": "A/C",
+    "travels": "Sea Bird Tourist",
+    "starRating": 3.8
+  },
+  {
+    "id": "bus8",
+    "name": "Bus #8",
+    "type": "A/C",
+    "travels": "Bharath Motors",
+    "starRating": 4.2
+  },
+  {
+    "id": "bus9",
+    "name": "Bus #9",
+    "type": "Non A/C",
+    "travels": "Sugama Tourist",
+    "starRating": 4.9
+  },
+  {
+    "id": "bus10",
+    "name": "Bus #10",
+    "type": "Non A/C",
+    "travels": "Greenline Travels",
+    "starRating": 5.0
+  },
+  {
+    "id": "bus11",
+    "name": "Bus #11",
+    "type": "A/C",
+    "travels": "Cauvery Travels",
+    "starRating": 3.3
+  },
+  {
+    "id": "bus12",
+    "name": "Bus #12",
+    "type": "A/C",
+    "travels": "Canara Travels",
+    "starRating": 4.7
+  }
+]

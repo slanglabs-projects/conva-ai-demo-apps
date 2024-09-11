@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.Activity.MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#512da8"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:theme="@style/AppTheme.Toolbar">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:id="@+id/my_booking_button"
+                    android:src="@drawable/ic_ticket"
+                    app:tint="@android:color/white" />
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="-16dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="260dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/bus_image_1" />
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/print_clearly"
+                        android:text="Sample Bus App"
+                        android:textAlignment="center"
+                        android:textColor="#FFFFFF"
+                        android:textSize="32sp" />
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textView"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/gotham"
+                        android:text="Where you want to go."
+                        android:textAlignment="center"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp" />
+
+                </RelativeLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="-44dp"
+                    android:layout_marginRight="16dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardUseCompatPadding="true"
+                    app:contentPadding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/source_text_field"
+                                android:layout_gravity="left"
+                                android:layout_width="wrap_content"
+                                android:layout_height="60dp"
+                                android:drawableStart="@drawable/ic_outline_location_on_24"
+                                android:drawablePadding="16dp"
+                                android:fontFamily="@font/calibri"
+                                android:gravity="center_vertical"
+                                android:hint="Source"
+                                android:inputType="text"
+                                android:maxLines="1"
+                                android:layout_weight="1"
+                                android:drawableTint="#e0daf0"
+                                android:textColor="@android:color/black"
+                                android:textSize="16sp" />
+
+
+<!--                            <in.slanglabs.platform.ui.SlangVoiceAssist-->
+<!--                                android:id="@+id/source_button_id"-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_marginTop="5dp"-->
+<!--                                android:layout_weight="0"-->
+<!--                                android:visibility="gone"-->
+<!--                                android:clickable="true"-->
+<!--                                android:gravity="right"-->
+<!--                                app:slang_lib_voice_assist_id="source_button"-->
+<!--                                app:slang_lib_animation_duration="850"/>-->
+
+                    </LinearLayout>
+
+
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@android:color/darker_gray" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/destination_text_field"
+                            android:layout_width="200dp"
+                            android:layout_height="60dp"
+                            android:drawableStart="@drawable/ic_baseline_location_on_24"
+                            android:drawablePadding="16dp"
+                            android:fontFamily="@font/calibri"
+                            android:gravity="center_vertical"
+                            android:hint="Destination"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:drawableTint="#e0daf0"
+                            android:textColor="@android:color/black"
+                            android:textSize="16sp" />
+
+<!--                        <in.slanglabs.platform.ui.SlangVoiceAssist-->
+<!--                            android:id="@+id/destination_button_id"-->
+<!--                            android:gravity="right"-->
+<!--                            android:layout_marginTop="5dp"-->
+<!--                            android:layout_weight="1"-->
+<!--                            android:visibility="gone"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:clickable="true"-->
+<!--                            app:slang_lib_voice_assist_id="destination_button" />-->
+                    </LinearLayout>
+
+
+
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@android:color/darker_gray" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/date_text_field"
+                            android:layout_width="200dp"
+                            android:layout_height="60dp"
+                            android:drawableStart="@drawable/ic_date_range_light_blue_24dp"
+                            android:drawablePadding="16dp"
+                            android:fontFamily="@font/calibri"
+                            android:gravity="center_vertical"
+                            android:hint="Select Date"
+                            android:inputType="date"
+                            android:maxLines="1"
+                            android:textColor="@android:color/black"
+                            android:textSize="16sp" />
+
+<!--                        <in.slanglabs.platform.ui.SlangVoiceAssist-->
+<!--                            android:id="@+id/date_button"-->
+<!--                            android:layout_marginTop="5dp"-->
+<!--                            android:gravity="right"-->
+<!--                            android:layout_weight="1"-->
+<!--                            android:visibility="gone"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:clickable="true"-->
+<!--                            app:slang_lib_voice_assist_id="date_button" />-->
+
+
+                    </LinearLayout>
+
+
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+                <Button
+                    android:id="@+id/search_buses"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="16dp"
+                    android:background="@drawable/buttonshape"
+                    android:fontFamily="@font/calibri"
+                    android:text="Search Buses"
+                    android:textAllCaps="false"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

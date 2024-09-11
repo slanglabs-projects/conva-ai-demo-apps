@@ -1,0 +1,74 @@
+[
+  {
+    "busId": "bus1",
+    "travelClass": "Sleeper"
+  },
+  {
+    "busId": "bus2",
+    "travelClass": "Sleeper"
+  },
+  {
+    "busId": "bus3",
+    "travelClass": "Seater"
+  },
+  {
+    "busId": "bus4",
+    "travelClass": "Seater"
+  },
+  {
+    "busId": "bus5",
+    "travelClass": "Multi-Axel"
+  },
+  {
+    "busId": "bus5",
+    "travelClass": "Sleeper"
+  },
+  {
+    "busId": "bus6",
+    "travelClass": "Multi-Axel"
+  },
+  {
+    "busId": "bus6",
+    "travelClass": "Seater"
+  },
+  {
+    "busId": "bus7",
+    "travelClass": "Non-Stop"
+  },
+  {
+    "busId": "bus7",
+    "travelClass": "Sleeper"
+  },
+  {
+    "busId": "bus8",
+    "travelClass": "Non-Stop"
+  },
+  {
+    "busId": "bus8",
+    "travelClass": "Seater"
+  },
+  {
+    "busId": "bus9",
+    "travelClass": "Non-Stop"
+  },
+  {
+    "busId": "bus9",
+    "travelClass": "Sleeper"
+  },
+  {
+    "busId": "bus10",
+    "travelClass": "Non-Stop"
+  },
+  {
+    "busId": "bus10",
+    "travelClass": "Seater"
+  },
+  {
+    "busId": "bus11",
+    "travelClass": "Sleeper"
+  },
+  {
+    "busId": "bus12",
+    "travelClass": "Seater"
+  }
+]
