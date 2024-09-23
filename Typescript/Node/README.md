@@ -12,7 +12,8 @@ npm install conva-ai
 
 To use the Conva AI library, you first need to initialize the `Conva.AI` client with your credentials:
 
-```import ConvaAI from 'conva-ai';
+```
+import ConvaAI from 'conva-ai';
 
 const client = new ConvaAI({
 assistantID:"<YOUR_ASSISTANT_ID>",
