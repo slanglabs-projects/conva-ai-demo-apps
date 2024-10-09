@@ -1,0 +1,553 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		14C03E6D1B322C50AA8B76E2 /* Pods_ConvaAIPGApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 919CCA644D162995041D43F3 /* Pods_ConvaAIPGApp.framework */; };
+		956F76B72C9AD2DF00E229B6 /* ConvaAIPGAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956F76B62C9AD2DF00E229B6 /* ConvaAIPGAppApp.swift */; };
+		956F76BB2C9AD2E000E229B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 956F76BA2C9AD2E000E229B6 /* Assets.xcassets */; };
+		956F76BE2C9AD2E000E229B6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 956F76BD2C9AD2E000E229B6 /* Preview Assets.xcassets */; };
+		956F76CB2C9AD41200E229B6 /* HomeScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956F76CA2C9AD41200E229B6 /* HomeScreenViewModel.swift */; };
+		956F76CD2C9AD42500E229B6 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956F76CC2C9AD42500E229B6 /* HomeScreen.swift */; };
+		956F76CF2C9AD43600E229B6 /* ChatScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956F76CE2C9AD43600E229B6 /* ChatScreen.swift */; };
+		956F76D12C9AD45200E229B6 /* QRCodeScannerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956F76D02C9AD45200E229B6 /* QRCodeScannerScreen.swift */; };
+		956F76D32C9AD46700E229B6 /* AssistantCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956F76D22C9AD46700E229B6 /* AssistantCard.swift */; };
+		956F76D62C9ADD9800E229B6 /* CustomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956F76D52C9ADD9800E229B6 /* CustomSheet.swift */; };
+		956F76D82C9ADFA400E229B6 /* AssistantData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956F76D72C9ADFA400E229B6 /* AssistantData.swift */; };
+		956F76DA2C9AE02D00E229B6 /* QRCodeScannerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956F76D92C9AE02D00E229B6 /* QRCodeScannerController.swift */; };
+		956F76DC2C9AE4A200E229B6 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956F76DB2C9AE4A200E229B6 /* ChatViewModel.swift */; };
+		956F76DF2C9AE4F500E229B6 /* ConvaAICoreImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956F76DE2C9AE4F500E229B6 /* ConvaAICoreImpl.swift */; };
+		956F76E12C9AE50600E229B6 /* ConvaAICoreRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956F76E02C9AE50600E229B6 /* ConvaAICoreRepository.swift */; };
+		956F76E32C9AE5A900E229B6 /* ChatInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956F76E22C9AE5A900E229B6 /* ChatInfo.swift */; };
+		956F76E52C9AE5D200E229B6 /* ChatResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956F76E42C9AE5D200E229B6 /* ChatResponse.swift */; };
+		956F76E72C9AE62600E229B6 /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956F76E62C9AE62600E229B6 /* ChatBubble.swift */; };
+		956F76E92C9AE6F500E229B6 /* JSONViewBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956F76E82C9AE6F500E229B6 /* JSONViewBox.swift */; };
+		956F76EB2C9AE78B00E229B6 /* ChatSkeletonBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956F76EA2C9AE78B00E229B6 /* ChatSkeletonBubble.swift */; };
+		956F76ED2C9AF33900E229B6 /* DropDownPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956F76EC2C9AF33900E229B6 /* DropDownPicker.swift */; };
+		956F76EF2C9B051500E229B6 /* ChatHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956F76EE2C9B051500E229B6 /* ChatHeader.swift */; };
+		956F76F12C9B053C00E229B6 /* ChatInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956F76F02C9B053C00E229B6 /* ChatInputField.swift */; };
+		95F6FEE02C9B1CDD009253E6 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F6FEDF2C9B1CDD009253E6 /* Utils.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		13A33A45EA03371465660E79 /* Pods-ConvaAIPGApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConvaAIPGApp.debug.xcconfig"; path = "Target Support Files/Pods-ConvaAIPGApp/Pods-ConvaAIPGApp.debug.xcconfig"; sourceTree = "<group>"; };
+		919CCA644D162995041D43F3 /* Pods_ConvaAIPGApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ConvaAIPGApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		956F76B32C9AD2DF00E229B6 /* ConvaAIPGApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConvaAIPGApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		956F76B62C9AD2DF00E229B6 /* ConvaAIPGAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvaAIPGAppApp.swift; sourceTree = "<group>"; };
+		956F76BA2C9AD2E000E229B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		956F76BD2C9AD2E000E229B6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		956F76CA2C9AD41200E229B6 /* HomeScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewModel.swift; sourceTree = "<group>"; };
+		956F76CC2C9AD42500E229B6 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		956F76CE2C9AD43600E229B6 /* ChatScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatScreen.swift; sourceTree = "<group>"; };
+		956F76D02C9AD45200E229B6 /* QRCodeScannerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScannerScreen.swift; sourceTree = "<group>"; };
+		956F76D22C9AD46700E229B6 /* AssistantCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistantCard.swift; sourceTree = "<group>"; };
+		956F76D52C9ADD9800E229B6 /* CustomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSheet.swift; sourceTree = "<group>"; };
+		956F76D72C9ADFA400E229B6 /* AssistantData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistantData.swift; sourceTree = "<group>"; };
+		956F76D92C9AE02D00E229B6 /* QRCodeScannerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScannerController.swift; sourceTree = "<group>"; };
+		956F76DB2C9AE4A200E229B6 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		956F76DE2C9AE4F500E229B6 /* ConvaAICoreImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvaAICoreImpl.swift; sourceTree = "<group>"; };
+		956F76E02C9AE50600E229B6 /* ConvaAICoreRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvaAICoreRepository.swift; sourceTree = "<group>"; };
+		956F76E22C9AE5A900E229B6 /* ChatInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatInfo.swift; sourceTree = "<group>"; };
+		956F76E42C9AE5D200E229B6 /* ChatResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatResponse.swift; sourceTree = "<group>"; };
+		956F76E62C9AE62600E229B6 /* ChatBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
+		956F76E82C9AE6F500E229B6 /* JSONViewBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONViewBox.swift; sourceTree = "<group>"; };
+		956F76EA2C9AE78B00E229B6 /* ChatSkeletonBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatSkeletonBubble.swift; sourceTree = "<group>"; };
+		956F76EC2C9AF33900E229B6 /* DropDownPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownPicker.swift; sourceTree = "<group>"; };
+		956F76EE2C9B051500E229B6 /* ChatHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHeader.swift; sourceTree = "<group>"; };
+		956F76F02C9B053C00E229B6 /* ChatInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatInputField.swift; sourceTree = "<group>"; };
+		95F6FEDF2C9B1CDD009253E6 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		C05E7AA25FD4808527FD93FA /* Pods-ConvaAIPGApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConvaAIPGApp.release.xcconfig"; path = "Target Support Files/Pods-ConvaAIPGApp/Pods-ConvaAIPGApp.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		956F76B02C9AD2DF00E229B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14C03E6D1B322C50AA8B76E2 /* Pods_ConvaAIPGApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0FC0D231FCA943F807E1A8E2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				919CCA644D162995041D43F3 /* Pods_ConvaAIPGApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		956F76AA2C9AD2DF00E229B6 = {
+			isa = PBXGroup;
+			children = (
+				956F76B52C9AD2DF00E229B6 /* ConvaAIPGApp */,
+				956F76B42C9AD2DF00E229B6 /* Products */,
+				97FC9648FFC365F9070046F0 /* Pods */,
+				0FC0D231FCA943F807E1A8E2 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		956F76B42C9AD2DF00E229B6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				956F76B32C9AD2DF00E229B6 /* ConvaAIPGApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		956F76B52C9AD2DF00E229B6 /* ConvaAIPGApp */ = {
+			isa = PBXGroup;
+			children = (
+				956F76C92C9AD3F900E229B6 /* Model */,
+				956F76C82C9AD3F200E229B6 /* ViewModel */,
+				956F76C42C9AD3B300E229B6 /* UI */,
+				956F76B62C9AD2DF00E229B6 /* ConvaAIPGAppApp.swift */,
+				956F76BA2C9AD2E000E229B6 /* Assets.xcassets */,
+				956F76BC2C9AD2E000E229B6 /* Preview Content */,
+			);
+			path = ConvaAIPGApp;
+			sourceTree = "<group>";
+		};
+		956F76BC2C9AD2E000E229B6 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				956F76BD2C9AD2E000E229B6 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		956F76C42C9AD3B300E229B6 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				956F76D92C9AE02D00E229B6 /* QRCodeScannerController.swift */,
+				956F76C72C9AD3DC00E229B6 /* Components */,
+				956F76C52C9AD3C500E229B6 /* Screens */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		956F76C52C9AD3C500E229B6 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				956F76CC2C9AD42500E229B6 /* HomeScreen.swift */,
+				956F76CE2C9AD43600E229B6 /* ChatScreen.swift */,
+				956F76D02C9AD45200E229B6 /* QRCodeScannerScreen.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		956F76C72C9AD3DC00E229B6 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				956F76D22C9AD46700E229B6 /* AssistantCard.swift */,
+				956F76D52C9ADD9800E229B6 /* CustomSheet.swift */,
+				956F76E62C9AE62600E229B6 /* ChatBubble.swift */,
+				956F76E82C9AE6F500E229B6 /* JSONViewBox.swift */,
+				956F76EA2C9AE78B00E229B6 /* ChatSkeletonBubble.swift */,
+				956F76EC2C9AF33900E229B6 /* DropDownPicker.swift */,
+				956F76EE2C9B051500E229B6 /* ChatHeader.swift */,
+				956F76F02C9B053C00E229B6 /* ChatInputField.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		956F76C82C9AD3F200E229B6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				956F76CA2C9AD41200E229B6 /* HomeScreenViewModel.swift */,
+				956F76DB2C9AE4A200E229B6 /* ChatViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		956F76C92C9AD3F900E229B6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				956F76DD2C9AE4E700E229B6 /* ConvaAI */,
+				956F76D42C9AD4C600E229B6 /* Repository */,
+				956F76D72C9ADFA400E229B6 /* AssistantData.swift */,
+				956F76E22C9AE5A900E229B6 /* ChatInfo.swift */,
+				956F76E42C9AE5D200E229B6 /* ChatResponse.swift */,
+				95F6FEDF2C9B1CDD009253E6 /* Utils.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		956F76D42C9AD4C600E229B6 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				956F76E02C9AE50600E229B6 /* ConvaAICoreRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		956F76DD2C9AE4E700E229B6 /* ConvaAI */ = {
+			isa = PBXGroup;
+			children = (
+				956F76DE2C9AE4F500E229B6 /* ConvaAICoreImpl.swift */,
+			);
+			path = ConvaAI;
+			sourceTree = "<group>";
+		};
+		97FC9648FFC365F9070046F0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				13A33A45EA03371465660E79 /* Pods-ConvaAIPGApp.debug.xcconfig */,
+				C05E7AA25FD4808527FD93FA /* Pods-ConvaAIPGApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		956F76B22C9AD2DF00E229B6 /* ConvaAIPGApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 956F76C12C9AD2E000E229B6 /* Build configuration list for PBXNativeTarget "ConvaAIPGApp" */;
+			buildPhases = (
+				6283BC29CD252963B731F073 /* [CP] Check Pods Manifest.lock */,
+				956F76AF2C9AD2DF00E229B6 /* Sources */,
+				956F76B02C9AD2DF00E229B6 /* Frameworks */,
+				956F76B12C9AD2DF00E229B6 /* Resources */,
+				8467BB32EF1B7B311BF797D7 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ConvaAIPGApp;
+			productName = ConvaAIPGApp;
+			productReference = 956F76B32C9AD2DF00E229B6 /* ConvaAIPGApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		956F76AB2C9AD2DF00E229B6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					956F76B22C9AD2DF00E229B6 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+				};
+			};
+			buildConfigurationList = 956F76AE2C9AD2DF00E229B6 /* Build configuration list for PBXProject "ConvaAIPGApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 956F76AA2C9AD2DF00E229B6;
+			productRefGroup = 956F76B42C9AD2DF00E229B6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				956F76B22C9AD2DF00E229B6 /* ConvaAIPGApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		956F76B12C9AD2DF00E229B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				956F76BE2C9AD2E000E229B6 /* Preview Assets.xcassets in Resources */,
+				956F76BB2C9AD2E000E229B6 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6283BC29CD252963B731F073 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ConvaAIPGApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8467BB32EF1B7B311BF797D7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ConvaAIPGApp/Pods-ConvaAIPGApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ConvaAIPGApp/Pods-ConvaAIPGApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ConvaAIPGApp/Pods-ConvaAIPGApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		956F76AF2C9AD2DF00E229B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				956F76E52C9AE5D200E229B6 /* ChatResponse.swift in Sources */,
+				956F76E72C9AE62600E229B6 /* ChatBubble.swift in Sources */,
+				956F76ED2C9AF33900E229B6 /* DropDownPicker.swift in Sources */,
+				956F76CD2C9AD42500E229B6 /* HomeScreen.swift in Sources */,
+				956F76D62C9ADD9800E229B6 /* CustomSheet.swift in Sources */,
+				956F76D82C9ADFA400E229B6 /* AssistantData.swift in Sources */,
+				956F76CF2C9AD43600E229B6 /* ChatScreen.swift in Sources */,
+				95F6FEE02C9B1CDD009253E6 /* Utils.swift in Sources */,
+				956F76E32C9AE5A900E229B6 /* ChatInfo.swift in Sources */,
+				956F76E12C9AE50600E229B6 /* ConvaAICoreRepository.swift in Sources */,
+				956F76CB2C9AD41200E229B6 /* HomeScreenViewModel.swift in Sources */,
+				956F76DA2C9AE02D00E229B6 /* QRCodeScannerController.swift in Sources */,
+				956F76E92C9AE6F500E229B6 /* JSONViewBox.swift in Sources */,
+				956F76DF2C9AE4F500E229B6 /* ConvaAICoreImpl.swift in Sources */,
+				956F76D32C9AD46700E229B6 /* AssistantCard.swift in Sources */,
+				956F76EF2C9B051500E229B6 /* ChatHeader.swift in Sources */,
+				956F76EB2C9AE78B00E229B6 /* ChatSkeletonBubble.swift in Sources */,
+				956F76B72C9AD2DF00E229B6 /* ConvaAIPGAppApp.swift in Sources */,
+				956F76DC2C9AE4A200E229B6 /* ChatViewModel.swift in Sources */,
+				956F76D12C9AD45200E229B6 /* QRCodeScannerScreen.swift in Sources */,
+				956F76F12C9B053C00E229B6 /* ChatInputField.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		956F76BF2C9AD2E000E229B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		956F76C02C9AD2E000E229B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		956F76C22C9AD2E000E229B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13A33A45EA03371465660E79 /* Pods-ConvaAIPGApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ConvaAIPGApp/Preview Content\"";
+				DEVELOPMENT_TEAM = KD3983K3YC;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need the camera to scan QR code ";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = in.slanglabs.ConvaAIPGApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		956F76C32C9AD2E000E229B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C05E7AA25FD4808527FD93FA /* Pods-ConvaAIPGApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ConvaAIPGApp/Preview Content\"";
+				DEVELOPMENT_TEAM = KD3983K3YC;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need the camera to scan QR code ";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = in.slanglabs.ConvaAIPGApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		956F76AE2C9AD2DF00E229B6 /* Build configuration list for PBXProject "ConvaAIPGApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				956F76BF2C9AD2E000E229B6 /* Debug */,
+				956F76C02C9AD2E000E229B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		956F76C12C9AD2E000E229B6 /* Build configuration list for PBXNativeTarget "ConvaAIPGApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				956F76C22C9AD2E000E229B6 /* Debug */,
+				956F76C32C9AD2E000E229B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 956F76AB2C9AD2DF00E229B6 /* Project object */;
+}
