@@ -45,8 +45,8 @@ When processing the input, the app returns a structured response in the followin
 
 This app utilizes the **ConvaAICore SDK** to facilitate the splitting of bills among friends based on user-defined conditions. For more information about the SDK use cases, you can navigate to the following files in the project:
 
-- [ConvaAICoreRepository](https://github.com/slanglabs/polyglot/blob/master/client/slang-flutter-sample-apps/ConvaAISplit/lib/model/conva_ai_core_repository.dart): Implements the functionality for processing responses related to bill splitting.
-- [ConvaAICoreImpl.swift](https://github.com/slanglabs/polyglot/blob/master/client/slang-flutter-sample-apps/ConvaAISplit/lib/model/conva/conva_ai_core.dart): Contains the core logic for connecting to the Conva.AI platform and making API calls.
+- [ConvaAICoreRepository](https://github.com/slanglabs-projects/conva-ai-demo-apps/blob/master/Flutter/ConvaAISplit/lib/model/conva_ai_core_repository.dart): Implements the functionality for processing responses related to bill splitting.
+- [ConvaAICoreImpl.swift](https://github.com/slanglabs-projects/conva-ai-demo-apps/blob/master/Flutter/ConvaAISplit/lib/model/conva/conva_ai_core.dart): Contains the core logic for connecting to the Conva.AI platform and making API calls.
 
 These files are essential for handling the input analysis and generating accurate split calculations based on user-defined parameters.
 
