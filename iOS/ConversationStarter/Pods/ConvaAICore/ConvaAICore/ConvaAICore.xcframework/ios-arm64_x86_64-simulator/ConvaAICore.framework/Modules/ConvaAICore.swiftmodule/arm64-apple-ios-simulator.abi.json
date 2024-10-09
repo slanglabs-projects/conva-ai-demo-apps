@@ -1,0 +1,2903 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ConvaAICore",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ConvaAICore",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AnyCodable",
+        "printedName": "AnyCodable",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "string",
+            "printedName": "string",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ConvaAICore.AnyCodable.Type) -> (Swift.String) -> ConvaAICore.AnyCodable",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> ConvaAICore.AnyCodable",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnyCodable",
+                        "printedName": "ConvaAICore.AnyCodable",
+                        "usr": "s:11ConvaAICore10AnyCodableO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ConvaAICore.AnyCodable.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnyCodable",
+                        "printedName": "ConvaAICore.AnyCodable",
+                        "usr": "s:11ConvaAICore10AnyCodableO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11ConvaAICore10AnyCodableO6stringyACSScACmF",
+            "mangledName": "$s11ConvaAICore10AnyCodableO6stringyACSScACmF",
+            "moduleName": "ConvaAICore"
+          },
+          {
+            "kind": "Var",
+            "name": "int",
+            "printedName": "int",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ConvaAICore.AnyCodable.Type) -> (Swift.Int) -> ConvaAICore.AnyCodable",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Int) -> ConvaAICore.AnyCodable",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnyCodable",
+                        "printedName": "ConvaAICore.AnyCodable",
+                        "usr": "s:11ConvaAICore10AnyCodableO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ConvaAICore.AnyCodable.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnyCodable",
+                        "printedName": "ConvaAICore.AnyCodable",
+                        "usr": "s:11ConvaAICore10AnyCodableO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11ConvaAICore10AnyCodableO3intyACSicACmF",
+            "mangledName": "$s11ConvaAICore10AnyCodableO3intyACSicACmF",
+            "moduleName": "ConvaAICore"
+          },
+          {
+            "kind": "Var",
+            "name": "double",
+            "printedName": "double",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ConvaAICore.AnyCodable.Type) -> (Swift.Double) -> ConvaAICore.AnyCodable",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Double) -> ConvaAICore.AnyCodable",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnyCodable",
+                        "printedName": "ConvaAICore.AnyCodable",
+                        "usr": "s:11ConvaAICore10AnyCodableO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Double",
+                        "printedName": "Swift.Double",
+                        "usr": "s:Sd"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ConvaAICore.AnyCodable.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnyCodable",
+                        "printedName": "ConvaAICore.AnyCodable",
+                        "usr": "s:11ConvaAICore10AnyCodableO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11ConvaAICore10AnyCodableO6doubleyACSdcACmF",
+            "mangledName": "$s11ConvaAICore10AnyCodableO6doubleyACSdcACmF",
+            "moduleName": "ConvaAICore"
+          },
+          {
+            "kind": "Var",
+            "name": "bool",
+            "printedName": "bool",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ConvaAICore.AnyCodable.Type) -> (Swift.Bool) -> ConvaAICore.AnyCodable",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Bool) -> ConvaAICore.AnyCodable",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnyCodable",
+                        "printedName": "ConvaAICore.AnyCodable",
+                        "usr": "s:11ConvaAICore10AnyCodableO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ConvaAICore.AnyCodable.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnyCodable",
+                        "printedName": "ConvaAICore.AnyCodable",
+                        "usr": "s:11ConvaAICore10AnyCodableO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11ConvaAICore10AnyCodableO4boolyACSbcACmF",
+            "mangledName": "$s11ConvaAICore10AnyCodableO4boolyACSbcACmF",
+            "moduleName": "ConvaAICore"
+          },
+          {
+            "kind": "Var",
+            "name": "map",
+            "printedName": "map",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ConvaAICore.AnyCodable.Type) -> ([Swift.String : ConvaAICore.AnyCodable]) -> ConvaAICore.AnyCodable",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "([Swift.String : ConvaAICore.AnyCodable]) -> ConvaAICore.AnyCodable",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnyCodable",
+                        "printedName": "ConvaAICore.AnyCodable",
+                        "usr": "s:11ConvaAICore10AnyCodableO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Dictionary",
+                        "printedName": "[Swift.String : ConvaAICore.AnyCodable]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "AnyCodable",
+                            "printedName": "ConvaAICore.AnyCodable",
+                            "usr": "s:11ConvaAICore10AnyCodableO"
+                          }
+                        ],
+                        "usr": "s:SD"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ConvaAICore.AnyCodable.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnyCodable",
+                        "printedName": "ConvaAICore.AnyCodable",
+                        "usr": "s:11ConvaAICore10AnyCodableO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11ConvaAICore10AnyCodableO3mapyACSDySSACGcACmF",
+            "mangledName": "$s11ConvaAICore10AnyCodableO3mapyACSDySSACGcACmF",
+            "moduleName": "ConvaAICore"
+          },
+          {
+            "kind": "Var",
+            "name": "array",
+            "printedName": "array",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ConvaAICore.AnyCodable.Type) -> ([ConvaAICore.AnyCodable]) -> ConvaAICore.AnyCodable",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "([ConvaAICore.AnyCodable]) -> ConvaAICore.AnyCodable",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnyCodable",
+                        "printedName": "ConvaAICore.AnyCodable",
+                        "usr": "s:11ConvaAICore10AnyCodableO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[ConvaAICore.AnyCodable]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "AnyCodable",
+                            "printedName": "ConvaAICore.AnyCodable",
+                            "usr": "s:11ConvaAICore10AnyCodableO"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ConvaAICore.AnyCodable.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnyCodable",
+                        "printedName": "ConvaAICore.AnyCodable",
+                        "usr": "s:11ConvaAICore10AnyCodableO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11ConvaAICore10AnyCodableO5arrayyACSayACGcACmF",
+            "mangledName": "$s11ConvaAICore10AnyCodableO5arrayyACSayACGcACmF",
+            "moduleName": "ConvaAICore"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AnyCodable",
+                "printedName": "ConvaAICore.AnyCodable",
+                "usr": "s:11ConvaAICore10AnyCodableO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11ConvaAICore10AnyCodableO4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s11ConvaAICore10AnyCodableO4fromACs7Decoder_p_tKcfc",
+            "moduleName": "ConvaAICore",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11ConvaAICore10AnyCodableO6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s11ConvaAICore10AnyCodableO6encode2toys7Encoder_p_tKF",
+            "moduleName": "ConvaAICore",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AnyCodable",
+                "printedName": "ConvaAICore.AnyCodable",
+                "usr": "s:11ConvaAICore10AnyCodableO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AnyCodable",
+                "printedName": "ConvaAICore.AnyCodable",
+                "usr": "s:11ConvaAICore10AnyCodableO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11ConvaAICore10AnyCodableO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s11ConvaAICore10AnyCodableO2eeoiySbAC_ACtFZ",
+            "moduleName": "ConvaAICore",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:11ConvaAICore10AnyCodableO",
+        "mangledName": "$s11ConvaAICore10AnyCodableO",
+        "moduleName": "ConvaAICore",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ConvaAICore",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ConvaAIEnvironment",
+        "printedName": "ConvaAIEnvironment",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "production",
+            "printedName": "production",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ConvaAICore.ConvaAIEnvironment.Type) -> ConvaAICore.ConvaAIEnvironment",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ConvaAIEnvironment",
+                    "printedName": "ConvaAICore.ConvaAIEnvironment",
+                    "usr": "s:11ConvaAICore0A13AIEnvironmentO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ConvaAICore.ConvaAIEnvironment.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ConvaAIEnvironment",
+                        "printedName": "ConvaAICore.ConvaAIEnvironment",
+                        "usr": "s:11ConvaAICore0A13AIEnvironmentO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11ConvaAICore0A13AIEnvironmentO10productionyA2CmF",
+            "mangledName": "$s11ConvaAICore0A13AIEnvironmentO10productionyA2CmF",
+            "moduleName": "ConvaAICore"
+          },
+          {
+            "kind": "Var",
+            "name": "staging",
+            "printedName": "staging",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ConvaAICore.ConvaAIEnvironment.Type) -> ConvaAICore.ConvaAIEnvironment",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ConvaAIEnvironment",
+                    "printedName": "ConvaAICore.ConvaAIEnvironment",
+                    "usr": "s:11ConvaAICore0A13AIEnvironmentO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ConvaAICore.ConvaAIEnvironment.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ConvaAIEnvironment",
+                        "printedName": "ConvaAICore.ConvaAIEnvironment",
+                        "usr": "s:11ConvaAICore0A13AIEnvironmentO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11ConvaAICore0A13AIEnvironmentO7stagingyA2CmF",
+            "mangledName": "$s11ConvaAICore0A13AIEnvironmentO7stagingyA2CmF",
+            "moduleName": "ConvaAICore"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "ConvaAICore.ConvaAIEnvironment?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ConvaAIEnvironment",
+                    "printedName": "ConvaAICore.ConvaAIEnvironment",
+                    "usr": "s:11ConvaAICore0A13AIEnvironmentO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11ConvaAICore0A13AIEnvironmentO8rawValueACSgSS_tcfc",
+            "mangledName": "$s11ConvaAICore0A13AIEnvironmentO8rawValueACSgSS_tcfc",
+            "moduleName": "ConvaAICore",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11ConvaAICore0A13AIEnvironmentO8rawValueSSvp",
+            "mangledName": "$s11ConvaAICore0A13AIEnvironmentO8rawValueSSvp",
+            "moduleName": "ConvaAICore",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11ConvaAICore0A13AIEnvironmentO8rawValueSSvg",
+                "mangledName": "$s11ConvaAICore0A13AIEnvironmentO8rawValueSSvg",
+                "moduleName": "ConvaAICore",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:11ConvaAICore0A13AIEnvironmentO",
+        "mangledName": "$s11ConvaAICore0A13AIEnvironmentO",
+        "moduleName": "ConvaAICore",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "enumRawTypeName": "String",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ConvaAICore",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ConvaAICapability",
+        "printedName": "ConvaAICapability",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "input",
+            "printedName": "input",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11ConvaAICore0A12AICapabilityV5inputSSSgvp",
+            "mangledName": "$s11ConvaAICore0A12AICapabilityV5inputSSSgvp",
+            "moduleName": "ConvaAICore",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11ConvaAICore0A12AICapabilityV5inputSSSgvg",
+                "mangledName": "$s11ConvaAICore0A12AICapabilityV5inputSSSgvg",
+                "moduleName": "ConvaAICore",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "message",
+            "printedName": "message",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11ConvaAICore0A12AICapabilityV7messageSSSgvp",
+            "mangledName": "$s11ConvaAICore0A12AICapabilityV7messageSSSgvp",
+            "moduleName": "ConvaAICore",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11ConvaAICore0A12AICapabilityV7messageSSSgvg",
+                "mangledName": "$s11ConvaAICore0A12AICapabilityV7messageSSSgvg",
+                "moduleName": "ConvaAICore",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "reason",
+            "printedName": "reason",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11ConvaAICore0A12AICapabilityV6reasonSSSgvp",
+            "mangledName": "$s11ConvaAICore0A12AICapabilityV6reasonSSSgvp",
+            "moduleName": "ConvaAICore",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11ConvaAICore0A12AICapabilityV6reasonSSSgvg",
+                "mangledName": "$s11ConvaAICore0A12AICapabilityV6reasonSSSgvg",
+                "moduleName": "ConvaAICore",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "language",
+            "printedName": "language",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11ConvaAICore0A12AICapabilityV8languageSSSgvp",
+            "mangledName": "$s11ConvaAICore0A12AICapabilityV8languageSSSgvp",
+            "moduleName": "ConvaAICore",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11ConvaAICore0A12AICapabilityV8languageSSSgvg",
+                "mangledName": "$s11ConvaAICore0A12AICapabilityV8languageSSSgvg",
+                "moduleName": "ConvaAICore",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "llm",
+            "printedName": "llm",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11ConvaAICore0A12AICapabilityV3llmSSSgvp",
+            "mangledName": "$s11ConvaAICore0A12AICapabilityV3llmSSSgvp",
+            "moduleName": "ConvaAICore",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11ConvaAICore0A12AICapabilityV3llmSSSgvg",
+                "mangledName": "$s11ConvaAICore0A12AICapabilityV3llmSSSgvg",
+                "moduleName": "ConvaAICore",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "requestId",
+            "printedName": "requestId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11ConvaAICore0A12AICapabilityV9requestIdSSSgvp",
+            "mangledName": "$s11ConvaAICore0A12AICapabilityV9requestIdSSSgvp",
+            "moduleName": "ConvaAICore",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11ConvaAICore0A12AICapabilityV9requestIdSSSgvg",
+                "mangledName": "$s11ConvaAICore0A12AICapabilityV9requestIdSSSgvg",
+                "moduleName": "ConvaAICore",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "responseType",
+            "printedName": "responseType",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11ConvaAICore0A12AICapabilityV12responseTypeSSSgvp",
+            "mangledName": "$s11ConvaAICore0A12AICapabilityV12responseTypeSSSgvp",
+            "moduleName": "ConvaAICore",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11ConvaAICore0A12AICapabilityV12responseTypeSSSgvg",
+                "mangledName": "$s11ConvaAICore0A12AICapabilityV12responseTypeSSSgvg",
+                "moduleName": "ConvaAICore",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "messageType",
+            "printedName": "messageType",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11ConvaAICore0A12AICapabilityV11messageTypeSSSgvp",
+            "mangledName": "$s11ConvaAICore0A12AICapabilityV11messageTypeSSSgvp",
+            "moduleName": "ConvaAICore",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11ConvaAICore0A12AICapabilityV11messageTypeSSSgvg",
+                "mangledName": "$s11ConvaAICore0A12AICapabilityV11messageTypeSSSgvg",
+                "moduleName": "ConvaAICore",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "capability",
+            "printedName": "capability",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11ConvaAICore0A12AICapabilityV10capabilitySSSgvp",
+            "mangledName": "$s11ConvaAICore0A12AICapabilityV10capabilitySSSgvp",
+            "moduleName": "ConvaAICore",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11ConvaAICore0A12AICapabilityV10capabilitySSSgvg",
+                "mangledName": "$s11ConvaAICore0A12AICapabilityV10capabilitySSSgvg",
+                "moduleName": "ConvaAICore",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isError",
+            "printedName": "isError",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Bool?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11ConvaAICore0A12AICapabilityV7isErrorSbSgvp",
+            "mangledName": "$s11ConvaAICore0A12AICapabilityV7isErrorSbSgvp",
+            "moduleName": "ConvaAICore",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Bool?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11ConvaAICore0A12AICapabilityV7isErrorSbSgvg",
+                "mangledName": "$s11ConvaAICore0A12AICapabilityV7isErrorSbSgvg",
+                "moduleName": "ConvaAICore",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isFinal",
+            "printedName": "isFinal",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Bool?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11ConvaAICore0A12AICapabilityV7isFinalSbSgvp",
+            "mangledName": "$s11ConvaAICore0A12AICapabilityV7isFinalSbSgvp",
+            "moduleName": "ConvaAICore",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Bool?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11ConvaAICore0A12AICapabilityV7isFinalSbSgvg",
+                "mangledName": "$s11ConvaAICore0A12AICapabilityV7isFinalSbSgvg",
+                "moduleName": "ConvaAICore",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isUnsupported",
+            "printedName": "isUnsupported",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Bool?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11ConvaAICore0A12AICapabilityV13isUnsupportedSbSgvp",
+            "mangledName": "$s11ConvaAICore0A12AICapabilityV13isUnsupportedSbSgvp",
+            "moduleName": "ConvaAICore",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Bool?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11ConvaAICore0A12AICapabilityV13isUnsupportedSbSgvg",
+                "mangledName": "$s11ConvaAICore0A12AICapabilityV13isUnsupportedSbSgvg",
+                "moduleName": "ConvaAICore",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "parameters",
+            "printedName": "parameters",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11ConvaAICore0A12AICapabilityV10parametersSDySSypGvp",
+            "mangledName": "$s11ConvaAICore0A12AICapabilityV10parametersSDySSypGvp",
+            "moduleName": "ConvaAICore",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11ConvaAICore0A12AICapabilityV10parametersSDySSypGvg",
+                "mangledName": "$s11ConvaAICore0A12AICapabilityV10parametersSDySSypGvg",
+                "moduleName": "ConvaAICore",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "relatedQueries",
+            "printedName": "relatedQueries",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11ConvaAICore0A12AICapabilityV14relatedQueriesSaySSGSgvp",
+            "mangledName": "$s11ConvaAICore0A12AICapabilityV14relatedQueriesSaySSGSgvp",
+            "moduleName": "ConvaAICore",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "[Swift.String]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[Swift.String]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11ConvaAICore0A12AICapabilityV14relatedQueriesSaySSGSgvg",
+                "mangledName": "$s11ConvaAICore0A12AICapabilityV14relatedQueriesSaySSGSgvg",
+                "moduleName": "ConvaAICore",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "conversationHistory",
+            "printedName": "conversationHistory",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11ConvaAICore0A12AICapabilityV19conversationHistorySSSgvp",
+            "mangledName": "$s11ConvaAICore0A12AICapabilityV19conversationHistorySSSgvp",
+            "moduleName": "ConvaAICore",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11ConvaAICore0A12AICapabilityV19conversationHistorySSSgvg",
+                "mangledName": "$s11ConvaAICore0A12AICapabilityV19conversationHistorySSSgvg",
+                "moduleName": "ConvaAICore",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isParametersComplete",
+            "printedName": "isParametersComplete",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Bool?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11ConvaAICore0A12AICapabilityV20isParametersCompleteSbSgvp",
+            "mangledName": "$s11ConvaAICore0A12AICapabilityV20isParametersCompleteSbSgvp",
+            "moduleName": "ConvaAICore",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Bool?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11ConvaAICore0A12AICapabilityV20isParametersCompleteSbSgvg",
+                "mangledName": "$s11ConvaAICore0A12AICapabilityV20isParametersCompleteSbSgvg",
+                "moduleName": "ConvaAICore",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ConvaAICapability",
+                "printedName": "ConvaAICore.ConvaAICapability",
+                "usr": "s:11ConvaAICore0A12AICapabilityV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11ConvaAICore0A12AICapabilityV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s11ConvaAICore0A12AICapabilityV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "ConvaAICore",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:11ConvaAICore0A12AICapabilityV",
+        "mangledName": "$s11ConvaAICore0A12AICapabilityV",
+        "moduleName": "ConvaAICore",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ConvaAICore",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ConvaAICore",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ConvaAICore",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ConvaAICore",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ConvaAI",
+        "printedName": "ConvaAI",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "version",
+            "printedName": "version",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11ConvaAICore0A2AIV7versionSSvpZ",
+            "mangledName": "$s11ConvaAICore0A2AIV7versionSSvpZ",
+            "moduleName": "ConvaAICore",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11ConvaAICore0A2AIV7versionSSvgZ",
+                "mangledName": "$s11ConvaAICore0A2AIV7versionSSvgZ",
+                "moduleName": "ConvaAICore",
+                "static": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "initialize",
+            "printedName": "initialize(with:key:version:env:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ConvaAIEnvironment",
+                "printedName": "ConvaAICore.ConvaAIEnvironment",
+                "hasDefaultArg": true,
+                "usr": "s:11ConvaAICore0A13AIEnvironmentO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11ConvaAICore0A2AIV10initialize4with3key7version3envySS_S2SAA0A13AIEnvironmentOtFZ",
+            "mangledName": "$s11ConvaAICore0A2AIV10initialize4with3key7version3envySS_S2SAA0A13AIEnvironmentOtFZ",
+            "moduleName": "ConvaAICore",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "invokeCapability",
+            "printedName": "invokeCapability(with:capabilityName:capabilityGroup:context:llmKey:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "ConvaAICore.ConvaAICapability?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ConvaAICapability",
+                    "printedName": "ConvaAICore.ConvaAICapability",
+                    "usr": "s:11ConvaAICore0A12AICapabilityV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "ConvaAICore.ConvaAIContext?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ConvaAIContext",
+                    "printedName": "ConvaAICore.ConvaAIContext",
+                    "usr": "s:11ConvaAICore0A9AIContextV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11ConvaAICore0A2AIV16invokeCapability4with14capabilityName0G5Group7context6llmKeyAA0A12AICapabilityVSgSS_SSSgAmA0A9AIContextVSgAMtYaKFZ",
+            "mangledName": "$s11ConvaAICore0A2AIV16invokeCapability4with14capabilityName0G5Group7context6llmKeyAA0A12AICapabilityVSgSS_SSSgAmA0A9AIContextVSgAMtYaKFZ",
+            "moduleName": "ConvaAICore",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "invokeCapabilityStream",
+            "printedName": "invokeCapabilityStream(with:capabilityName:capabilityGroup:context:llmKey:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AsyncThrowingStream",
+                "printedName": "_Concurrency.AsyncThrowingStream<ConvaAICore.ConvaAICapability, any Swift.Error>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ConvaAICapability",
+                    "printedName": "ConvaAICore.ConvaAICapability",
+                    "usr": "s:11ConvaAICore0A12AICapabilityV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Error",
+                    "printedName": "any Swift.Error",
+                    "usr": "s:s5ErrorP"
+                  }
+                ],
+                "usr": "s:Scs"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "ConvaAICore.ConvaAIContext?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ConvaAIContext",
+                    "printedName": "ConvaAICore.ConvaAIContext",
+                    "usr": "s:11ConvaAICore0A9AIContextV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11ConvaAICore0A2AIV22invokeCapabilityStream4with14capabilityName0H5Group7context6llmKeyScsyAA0A12AICapabilityVs5Error_pGSS_SSSgAnA0A9AIContextVSgANtFZ",
+            "mangledName": "$s11ConvaAICore0A2AIV22invokeCapabilityStream4with14capabilityName0H5Group7context6llmKeyScsyAA0A12AICapabilityVs5Error_pGSS_SSSgAnA0A9AIContextVSgANtFZ",
+            "moduleName": "ConvaAICore",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:11ConvaAICore0A2AIV",
+        "mangledName": "$s11ConvaAICore0A2AIV",
+        "moduleName": "ConvaAICore",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ConvaAICore",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ConvaAICore",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ConvaAICore",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ConvaAIContext",
+        "printedName": "ConvaAIContext",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(history:assistantContext:capabilityContext:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ConvaAIContext",
+                "printedName": "ConvaAICore.ConvaAIContext",
+                "usr": "s:11ConvaAICore0A9AIContextV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11ConvaAICore0A9AIContextV7history16assistantContext010capabilityF0ACSSSg_SDySSypGSgAItcfc",
+            "mangledName": "$s11ConvaAICore0A9AIContextV7history16assistantContext010capabilityF0ACSSSg_SDySSypGSgAItcfc",
+            "moduleName": "ConvaAICore",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ConvaAIContext",
+                "printedName": "ConvaAICore.ConvaAIContext",
+                "usr": "s:11ConvaAICore0A9AIContextV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11ConvaAICore0A9AIContextV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s11ConvaAICore0A9AIContextV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "ConvaAICore",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11ConvaAICore0A9AIContextV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s11ConvaAICore0A9AIContextV6encode2toys7Encoder_p_tKF",
+            "moduleName": "ConvaAICore",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:11ConvaAICore0A9AIContextV",
+        "mangledName": "$s11ConvaAICore0A9AIContextV",
+        "moduleName": "ConvaAICore",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ConvaAICore",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ConvaAICore",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/Utils\/EventSource\/EventStreamParser.swift",
+      "kind": "Array",
+      "offset": 530,
+      "length": 20,
+      "value": "[\"\r\n\", \"\n\", \"\r\"]"
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/ConvaAICapability.swift",
+      "kind": "StringLiteral",
+      "offset": 2090,
+      "length": 13,
+      "value": "\"input_query\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/ConvaAICapability.swift",
+      "kind": "StringLiteral",
+      "offset": 2169,
+      "length": 19,
+      "value": "\"response_language\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/ConvaAICapability.swift",
+      "kind": "StringLiteral",
+      "offset": 2208,
+      "length": 9,
+      "value": "\"llm_key\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/ConvaAICapability.swift",
+      "kind": "StringLiteral",
+      "offset": 2243,
+      "length": 12,
+      "value": "\"request_id\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/ConvaAICapability.swift",
+      "kind": "StringLiteral",
+      "offset": 2284,
+      "length": 15,
+      "value": "\"response_type\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/ConvaAICapability.swift",
+      "kind": "StringLiteral",
+      "offset": 2327,
+      "length": 14,
+      "value": "\"message_type\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/ConvaAICapability.swift",
+      "kind": "StringLiteral",
+      "offset": 2368,
+      "length": 11,
+      "value": "\"tool_name\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/ConvaAICapability.swift",
+      "kind": "StringLiteral",
+      "offset": 2403,
+      "length": 10,
+      "value": "\"is_error\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/ConvaAICapability.swift",
+      "kind": "StringLiteral",
+      "offset": 2437,
+      "length": 10,
+      "value": "\"is_final\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/ConvaAICapability.swift",
+      "kind": "StringLiteral",
+      "offset": 2477,
+      "length": 16,
+      "value": "\"is_unsupported\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/ConvaAICapability.swift",
+      "kind": "StringLiteral",
+      "offset": 2524,
+      "length": 12,
+      "value": "\"parameters\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/ConvaAICapability.swift",
+      "kind": "StringLiteral",
+      "offset": 2567,
+      "length": 17,
+      "value": "\"related_queries\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/ConvaAICapability.swift",
+      "kind": "StringLiteral",
+      "offset": 2620,
+      "length": 22,
+      "value": "\"conversation_history\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/ConvaAICapability.swift",
+      "kind": "StringLiteral",
+      "offset": 2679,
+      "length": 23,
+      "value": "\"is_parameter_complete\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/ConvaAICapability.swift",
+      "kind": "StringLiteral",
+      "offset": 2090,
+      "length": 13,
+      "value": "\"input_query\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/ConvaAICapability.swift",
+      "kind": "StringLiteral",
+      "offset": 2169,
+      "length": 19,
+      "value": "\"response_language\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/ConvaAICapability.swift",
+      "kind": "StringLiteral",
+      "offset": 2208,
+      "length": 9,
+      "value": "\"llm_key\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/ConvaAICapability.swift",
+      "kind": "StringLiteral",
+      "offset": 2243,
+      "length": 12,
+      "value": "\"request_id\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/ConvaAICapability.swift",
+      "kind": "StringLiteral",
+      "offset": 2284,
+      "length": 15,
+      "value": "\"response_type\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/ConvaAICapability.swift",
+      "kind": "StringLiteral",
+      "offset": 2327,
+      "length": 14,
+      "value": "\"message_type\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/ConvaAICapability.swift",
+      "kind": "StringLiteral",
+      "offset": 2368,
+      "length": 11,
+      "value": "\"tool_name\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/ConvaAICapability.swift",
+      "kind": "StringLiteral",
+      "offset": 2403,
+      "length": 10,
+      "value": "\"is_error\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/ConvaAICapability.swift",
+      "kind": "StringLiteral",
+      "offset": 2437,
+      "length": 10,
+      "value": "\"is_final\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/ConvaAICapability.swift",
+      "kind": "StringLiteral",
+      "offset": 2477,
+      "length": 16,
+      "value": "\"is_unsupported\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/ConvaAICapability.swift",
+      "kind": "StringLiteral",
+      "offset": 2524,
+      "length": 12,
+      "value": "\"parameters\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/ConvaAICapability.swift",
+      "kind": "StringLiteral",
+      "offset": 2567,
+      "length": 17,
+      "value": "\"related_queries\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/ConvaAICapability.swift",
+      "kind": "StringLiteral",
+      "offset": 2620,
+      "length": 22,
+      "value": "\"conversation_history\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/ConvaAICapability.swift",
+      "kind": "StringLiteral",
+      "offset": 2679,
+      "length": 23,
+      "value": "\"is_parameter_complete\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/Internal\/Configs+.swift",
+      "kind": "StringLiteral",
+      "offset": 176,
+      "length": 12,
+      "value": "\"production\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/Internal\/Configs+.swift",
+      "kind": "StringLiteral",
+      "offset": 1103,
+      "length": 7,
+      "value": "\"https\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/Internal\/Configs+.swift",
+      "kind": "StringLiteral",
+      "offset": 1143,
+      "length": 19,
+      "value": "\"infer-v2.conva.ai\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/Internal\/Configs+.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1195,
+      "length": 3,
+      "value": "443"
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/Internal\/Configs+.swift",
+      "kind": "StringLiteral",
+      "offset": 1234,
+      "length": 4,
+      "value": "\"v1\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/Internal\/Configs+.swift",
+      "kind": "StringLiteral",
+      "offset": 1279,
+      "length": 12,
+      "value": "\"assistants\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/Internal\/Configs+.swift",
+      "kind": "StringLiteral",
+      "offset": 1370,
+      "length": 7,
+      "value": "\"https\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/Internal\/Configs+.swift",
+      "kind": "StringLiteral",
+      "offset": 1410,
+      "length": 25,
+      "value": "\"infer-v2-stage.conva.ai\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/Internal\/Configs+.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1468,
+      "length": 3,
+      "value": "443"
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/Internal\/Configs+.swift",
+      "kind": "StringLiteral",
+      "offset": 1507,
+      "length": 4,
+      "value": "\"v1\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/Internal\/Configs+.swift",
+      "kind": "StringLiteral",
+      "offset": 1552,
+      "length": 12,
+      "value": "\"assistants\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/Internal\/ActionRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 207,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/Internal\/ActionRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 391,
+      "length": 7,
+      "value": "\"en-IN\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/Internal\/ActionRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 601,
+      "length": 13,
+      "value": "\"input_query\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/Internal\/ActionRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 633,
+      "length": 14,
+      "value": "\"assistant_id\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/Internal\/ActionRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 672,
+      "length": 11,
+      "value": "\"device_id\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/Internal\/ActionRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 707,
+      "length": 19,
+      "value": "\"assistant_version\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/Internal\/ActionRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 752,
+      "length": 12,
+      "value": "\"request_id\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/Internal\/ActionRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 784,
+      "length": 15,
+      "value": "\"assistant_env\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/Internal\/ActionRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 822,
+      "length": 9,
+      "value": "\"llm_key\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/Internal\/ActionRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 867,
+      "length": 22,
+      "value": "\"conversation_history\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/Internal\/ActionRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 914,
+      "length": 18,
+      "value": "\"request_language\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/Internal\/ActionRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 959,
+      "length": 13,
+      "value": "\"domain_name\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/Internal\/ActionRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 995,
+      "length": 8,
+      "value": "\"stream\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/Internal\/ActionRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 1034,
+      "length": 17,
+      "value": "\"capability_name\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/Internal\/ActionRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 1083,
+      "length": 18,
+      "value": "\"capability_group\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/Internal\/ActionRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 1137,
+      "length": 22,
+      "value": "\"conversation_context\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/Internal\/ActionRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 601,
+      "length": 13,
+      "value": "\"input_query\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/Internal\/ActionRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 633,
+      "length": 14,
+      "value": "\"assistant_id\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/Internal\/ActionRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 672,
+      "length": 11,
+      "value": "\"device_id\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/Internal\/ActionRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 707,
+      "length": 19,
+      "value": "\"assistant_version\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/Internal\/ActionRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 752,
+      "length": 12,
+      "value": "\"request_id\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/Internal\/ActionRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 784,
+      "length": 15,
+      "value": "\"assistant_env\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/Internal\/ActionRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 822,
+      "length": 9,
+      "value": "\"llm_key\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/Internal\/ActionRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 867,
+      "length": 22,
+      "value": "\"conversation_history\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/Internal\/ActionRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 914,
+      "length": 18,
+      "value": "\"request_language\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/Internal\/ActionRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 959,
+      "length": 13,
+      "value": "\"domain_name\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/Internal\/ActionRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 995,
+      "length": 8,
+      "value": "\"stream\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/Internal\/ActionRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 1034,
+      "length": 17,
+      "value": "\"capability_name\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/Internal\/ActionRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 1083,
+      "length": 18,
+      "value": "\"capability_group\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/Internal\/ActionRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 1137,
+      "length": 22,
+      "value": "\"conversation_context\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/Internal\/Impl.swift",
+      "kind": "StringLiteral",
+      "offset": 273,
+      "length": 15,
+      "value": "\"%@:\/\/%@\/%@\/%@\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/Internal\/Impl.swift",
+      "kind": "BooleanLiteral",
+      "offset": 684,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/ConvaAIContext.swift",
+      "kind": "StringLiteral",
+      "offset": 338,
+      "length": 22,
+      "value": "\"conversation_history\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/ConvaAIContext.swift",
+      "kind": "StringLiteral",
+      "offset": 393,
+      "length": 19,
+      "value": "\"assistant_context\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/ConvaAIContext.swift",
+      "kind": "StringLiteral",
+      "offset": 446,
+      "length": 20,
+      "value": "\"capability_context\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/ConvaAIContext.swift",
+      "kind": "StringLiteral",
+      "offset": 338,
+      "length": 22,
+      "value": "\"conversation_history\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/ConvaAIContext.swift",
+      "kind": "StringLiteral",
+      "offset": 393,
+      "length": 19,
+      "value": "\"assistant_context\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/ConvaAIContext.swift",
+      "kind": "StringLiteral",
+      "offset": 446,
+      "length": 20,
+      "value": "\"capability_context\""
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/Utils\/EventSource\/EventSource.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3024,
+      "length": 4,
+      "value": "3000"
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/Utils\/EventSource\/EventSource.swift",
+      "kind": "Dictionary",
+      "offset": 3558,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/Utils\/EventSource\/EventSource.swift",
+      "kind": "Dictionary",
+      "offset": 3853,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/visvos07\/Github\/phabricator\/polyglot\/client\/slang-ios-conva-sdk\/ConvaAICore\/Sources\/Utils\/EventSource\/EventSource.swift",
+      "kind": "StringLiteral",
+      "offset": 2921,
+      "length": 11,
+      "value": "\"ConvaAICore.EventSource\""
+    }
+  ]
+}
