@@ -86,8 +86,8 @@ Future<Response?> invokeCapabilityWithName(
 
 This app utilizes the **ConvaAICore SDK** to facilitate the setting of reminders based on user-defined conditions. For more information about the SDK use cases, you can navigate to the following files in the project:
 
-- [ConvaAICoreRepository](https://github.com/slanglabs/polyglot/blob/master/client/slang-flutter-sample-apps/conva_reminder_app/lib/model/conva_ai_core_repository.dart): Implements the functionality for processing responses related to setting reminders.
-- [ConvaAICoreImpl.dart](https://github.com/slanglabs/polyglot/blob/master/client/slang-flutter-sample-apps/conva_reminder_app/lib/model/conva/conva_ai_core.dart): Contains the core logic for connecting to the Conva.AI platform and making API calls.
+- [ConvaAICoreRepository](https://github.com/slanglabs-projects/conva-ai-demo-apps/blob/master/Flutter/conva_reminder_app/lib/model/conva_ai_core_repository.dart): Implements the functionality for processing responses related to setting reminders.
+- [ConvaAICoreImpl.dart](https://github.com/slanglabs-projects/conva-ai-demo-apps/blob/master/Flutter/conva_reminder_app/lib/model/conva/conva_ai_core.dart): Contains the core logic for connecting to the Conva.AI platform and making API calls.
 
 These files are essential for handling user input analysis and generating accurate reminder settings based on the provided parameters.
 
