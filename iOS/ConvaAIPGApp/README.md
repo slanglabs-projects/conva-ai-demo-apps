@@ -20,7 +20,7 @@ The **ConvaAIPGApp** is a playground application designed to test the capabiliti
 3. **Interact with Your Assistant**:
    - After scanning, you will land on the chat screen.
    - You can ask any questions related to your assistant, and it will respond accordingly.
-   - If you prefer, you can use the default assistants provided within the app.
+   - If you prefer, you can use the default assistants provided within the app. Here you can add your default assistants:- [Link to file](https://github.com/slanglabs-projects/conva-ai-demo-apps/blob/master/iOS/ConvaAIPGApp/ConvaAIPGApp/Model/Utils.swift)
 
 ## Key Features
 - **Playground for Testing**: Provides an interactive environment to test and experiment with your own assistant created in the Conva.AI studio.
@@ -51,8 +51,8 @@ To integrate the **Conva.AI Core SDK** into your project, follow these steps:
    - You can now use the SDK's features, such as sending queries and receiving responses, within your application. Refer to the SDK [documentation](https://docs.conva.ai/) for detailed usage instructions.
    
     - For detailed guidance on how to initialize the SDK and make API calls, refer to the following resources:
-        - **ConvaAICoreRepository.swift**: [Link to file](https://github.com/slanglabs/polyglot/blob/master/client/slang-ios-sample-apps/ConvaAIPGApp/ConvaAIPGApp/Model/ConvaAI/ConvaAICoreImpl.swift)
-        - **ConvaAICoreImpl.swift**: [Link to file](https://github.com/slanglabs/polyglot/blob/master/client/slang-ios-sample-apps/ConvaAIPGApp/ConvaAIPGApp/Model/Repository/ConvaAICoreRepository.swift)
+        - **ConvaAICoreRepository.swift**: [Link to file](https://github.com/slanglabs-projects/conva-ai-demo-apps/blob/master/iOS/ConvaAIPGApp/ConvaAIPGApp/Model/Repository/ConvaAICoreRepository.swift)
+        - **ConvaAICoreImpl.swift**: [Link to file](https://github.com/slanglabs-projects/conva-ai-demo-apps/blob/master/iOS/ConvaAIPGApp/ConvaAIPGApp/Model/ConvaAI/ConvaAICoreImpl.swift)
 
 
 ## Technologies Used
