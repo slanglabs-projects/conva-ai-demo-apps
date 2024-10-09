@@ -23,8 +23,10 @@ The **Conversation Starter App** is a smart chatting application that helps user
 
 This app utilizes the **Conva.AI Platform** to find conversation starters and replies. For more information about the Platform use cases, you can navigate to the following files in the project:
 
-- **ConvaAICoreRepository.swift**: [Link to file](https://github.com/slanglabs/polyglot/blob/master/client/slang-ios-sample-apps/ConversationStarter/ConversationStarter/Model/Repository/ConvaAICoreRepository.swift)
-- **ConvaAICoreImpl.swift**: [Link to file](https://github.com/slanglabs/polyglot/blob/master/client/slang-ios-sample-apps/ConversationStarter/ConversationStarter/Model/ConvaAI/ConvaAICoreImpl.swift)
+- **ConvaAICoreRepository.swift**: [Link to file](https://github.com/slanglabs-projects/conva-ai-demo-apps/blob/master/iOS/ConversationStarter/ConversationStarter/Model/Repository/ConvaAICoreRepository.swift)
+- **ConvaAICoreImpl.swift**: [Link to file](https://github.com/slanglabs-projects/conva-ai-demo-apps/blob/master/iOS/ConversationStarter/ConversationStarter/Model/ConvaAI/ConvaAICoreImpl.swift)
 
 These files contain the core logic for connecting to the Conva.AI platform, making API calls, and processing responses.
+
+Note :- Please use your assistant credentials here to make it work :- [Link to file](https://github.com/slanglabs-projects/conva-ai-demo-apps/blob/master/iOS/ConversationStarter/ConversationStarter/Model/Utils.swift)
 
